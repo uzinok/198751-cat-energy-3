@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Александр Зиновьев](https://up.htmlacademy.ru/adaptive-individual/3/user/198751).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
