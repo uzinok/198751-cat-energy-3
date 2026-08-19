@@ -8,7 +8,42 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+
+    <header class="header">
+      <div class="container">
+        <a href="/" class="header__logo logo">
+          <img src="./images/logo.svg" alt="Кет енерджи">
+        </a>
+
+        <a href="/" class="header__logo-center logo-center" tabindex="-1">
+          <img src="./images/logo-text" alt="Кет енерджи">
+        </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li><a href="/" class="nav__link">Главная</a></li>
+            <li><a href="catalog.html" class="nav__link">Каталог продукции</a></li>
+            <li><a href="#" class="nav__link">Подбор программы</a></li>
+          </ul>
+        </nav>
+
+        <button type="button" class="header__nav-toggle nav-toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-index">
+        <div class="hero-index__container container">
+          <h1 class="hero__title title">Функциональное питание для котов</h1>
+          <p class="hero__subtitle subtitle">Занялся собой? Займись котом!</p>
+
+          <img src="./images/Cat-Energy__PRO-500.png" alt="Cat Energy PRO 500" class="hero-index__product">
+        </div>
+      </section>
+    </main>
+
   </body>
 
 </html>
