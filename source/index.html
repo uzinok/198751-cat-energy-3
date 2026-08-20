@@ -12,23 +12,29 @@
     <!-- header -->
     <header class="header">
       <div class="container">
-        <a href="/" class="header__logo logo">
-          <img src="./images/logo.svg" alt="Кет енерджи">
+        <a class="header__logo logo" href="/" aria-current="page">
+          <img class="logo__images" src="./images/logo.svg" alt="Кет енерджи">
         </a>
 
-        <a href="/" class="header__logo-center logo-center" tabindex="-1">
-          <img src="./images/logo-text" alt="Кет енерджи">
+        <a class="header__logo-center logo-center" href="/" tabindex="-1" aria-current="page">
+          <img class="logo-center__images" src="./images/logo-text" alt="Кет енерджи">
         </a>
 
         <!-- nav -->
         <nav class="header__nav nav">
           <ul class="nav__list">
-            <li><a href="/" class="nav__link">Главная</a></li>
-            <li><a href="catalog.html" class="nav__link">Каталог продукции</a></li>
-            <li><a href="#" class="nav__link">Подбор программы</a></li>
+            <li>
+              <a class="nav__link" href="/" aria-current="page">Главная</a>
+            </li>
+            <li>
+              <a class="nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li>
+              <a class="nav__link" href="#">Подбор программы</a>
+            </li>
           </ul>
         </nav>
-        <button type="button" class="header__nav-toggle nav-toggle">
+        <button class="header__nav-toggle nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <!-- nav -->
@@ -44,9 +50,9 @@
           <h1 class="hero__title title">Функциональное питание для котов</h1>
           <p class="hero__subtitle subtitle">Занялся собой? Займись котом!</p>
 
-          <img src="./images/Cat-Energy__PRO-500.png" alt="Cat Energy PRO 500" class="hero-index__product">
+          <img class="hero-index__product" src="./images/Cat-Energy__PRO-500.png" alt="Cat Energy PRO 500">
 
-          <a href="#" class="hero-index__button button">Подобрать программу</a>
+          <a class="hero-index__button button" href="#">Подобрать программу</a>
         </div>
       </section>
       <!-- hero-index -->
@@ -61,12 +67,12 @@
             <li class="program-card">
               <h3 class="program-card__title">Похудение</h3>
               <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a href="#" class="program-card__button">Каталог slim</a>
+              <a class="program-card__button" href="#">Каталог slim</a>
             </li>
             <li class="program-card">
               <h3 class="program-card__title">Набор массы</h3>
               <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a href="#" class="program-card__button">Каталог pro</a>
+              <a class="program-card__button" href="#">Каталог pro</a>
             </li>
           </ul>
           <!-- program__list -->
@@ -121,14 +127,14 @@
           <!-- before-after -->
           <div class="example__before-after before-after">
             <picture>
-              <img src="./images/example__slider-before.png" alt="До" class="before-after__img before-after__img--before">
+              <img class="before-after__images before-after__images--before" src="./images/example__slider-before.png" alt="До">
             </picture>
             <picture>
-              <img src="./images/example__slider-after.png" alt="После" class="before-after__img before-after__img--after">
+              <img class="before-after__images before-after__images--after" src="./images/example__slider-after.png" alt="После">
             </picture>
 
-            <label for="before-after-range" class="visually-hidden">Показать картинку до или после</label>
-            <input type="range" class="before-after__range-js" min="0" max="100" value="50" step="1" id="slider-range">
+            <label class="visually-hidden" for="before-after-range">Показать картинку до или после</label>
+            <input class="before-after__range-js" type="range" min="0" max="100" value="50" step="1" id="before-after-range">
             <div class="before-after__range-visible"></div>
           </div>
           <!-- before-after -->
@@ -152,23 +158,35 @@
       <!-- dealers -->
 
       <div class="container">
-        <a href="/" class="footer__logo-center logo-center">
-          <img src="./images/logo-text" alt="Кет енерджи">
+        <a class="footer__logo-center logo-center" href="/" aria-current="page">
+          <img class="logo-center__images" src="./images/logo-text" alt="Кет енерджи">
         </a>
 
         <ul class="footer__social social">
-          <li><a href="#" class="social__link social__link--"><span class="visually-hidden">ВК</span></a></li>
-          <li><a href="#" class="social__link social__link--"><span class="visually-hidden">Youtube</span></a></li>
-          <li><a href="#" class="social__link social__link--"><span class="visually-hidden">Телеграм</span></a></li>
+          <li>
+            <a class="social__link social__link--vk" href="#">
+              <span class="visually-hidden">ВК</span>
+            </a>
+          </li>
+          <li>
+            <a class="social__link social__link--youtube" href="#">
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+          <li>
+            <a class="social__link social__link--telegram" href="#">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
         </ul>
 
         <div class="footer__partners partners">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="partners__logo logo">
-            <img src="./images/htmlacademy" alt="htmlacademy">
+          <a class="partners__logo logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="logo__images" src="./images/htmlacademy" alt="htmlacademy">
           </a>
 
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="partners__logo logo" tabindex="-1">
-            <img src="./images/htmlacademy" alt="htmlacademy">
+          <a class="partners__logo-center logo-center" href="https://htmlacademy.ru/intensive/adaptive" tabindex="-1">
+            <img class="logo-center__images" src="./images/htmlacademy" alt="htmlacademy">
           </a>
         </div>
       </div>
