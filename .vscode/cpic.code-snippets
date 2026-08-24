@@ -1,19 +1,19 @@
 {
-  "picture с адаптивной графикой (выбор формата)": {
+  "picture с адаптивной графикой (выбор формата, все type)": {
     "scope": "html",
     "prefix": "cpic",
     "body": [
       "<picture>",
       "\t<source media=\"(min-width: 768px)\" srcset=\"images/${1:$CLIPBOARD}@tablet@1x.${3:webp}, images/${1:$CLIPBOARD}@tablet@2x.${3:webp}\" type=\"image/${3:webp}\">",
-      "\t<source media=\"(min-width: 768px)\" srcset=\"images/${1:$CLIPBOARD}@tablet@1x.${4:png}, images/${1:$CLIPBOARD}@tablet@2x.${4:png}\">",
+      "\t<source media=\"(min-width: 768px)\" srcset=\"images/${1:$CLIPBOARD}@tablet@1x.${4:png}, images/${1:$CLIPBOARD}@tablet@2x.${4:png}\" type=\"image/${4:png}\">",
       "",
       "\t<source media=\"(min-width: 1024px)\" srcset=\"images/${1:$CLIPBOARD}@desktop@1x.${3:webp}, images/${1:$CLIPBOARD}@desktop@2x.${3:webp}\" type=\"image/${3:webp}\">",
-      "\t<source media=\"(min-width: 1024px)\" srcset=\"images/${1:$CLIPBOARD}@desktop@1x.${4:png}, images/${1:$CLIPBOARD}@desktop@2x.${4:png}\">",
+      "\t<source media=\"(min-width: 1024px)\" srcset=\"images/${1:$CLIPBOARD}@desktop@1x.${4:png}, images/${1:$CLIPBOARD}@desktop@2x.${4:png}\" type=\"image/${4:png}\">",
       "",
       "\t<source srcset=\"images/${1:$CLIPBOARD}@1x.${3:webp}, images/${1:$CLIPBOARD}@2x.${3:webp}\" type=\"image/${3:webp}\">",
       "\t<img src=\"images/${1:$CLIPBOARD}@1x.${4:png}\" srcset=\"images/${1:$CLIPBOARD}@1x.${4:png} 1x, images/${1:$CLIPBOARD}@2x.${4:png} 2x\" alt=\"$0\" class=\"$2\">",
       "</picture>"
     ],
-    "description": "Адаптивная картинка: выбирай форматы через ${3} (основной, напр. webp) и ${4} (фоллбэк, напр. png/jpg), префиксы @1x/@2x, версии tablet/desktop, папка images"
+    "description": "Адаптивная картинка: у всех source есть type, выбирай форматы через ${3} (основной, напр. webp) и ${4} (фоллбэк, напр. png/jpg), префиксы @1x/@2x, версии tablet/desktop, папка images"
   }
 }
