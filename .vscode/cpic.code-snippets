@@ -1,0 +1,19 @@
+{
+  "picture с картинкой в формате webp и медиа-выражениями": {
+    "scope": "html",
+    "prefix": "cpic",
+    "body": [
+      "<picture>",
+      "\t<source media=\"(min-width: 768px)\" srcset=\"images/${1:$CLIPBOARD}@tablet@1x.webp, images/${1:$CLIPBOARD}@tablet@2x.webp\" type=\"image/webp\">",
+      "\t<source media=\"(min-width: 768px)\" srcset=\"images/${1:$CLIPBOARD}@tablet@1x.png, images/${1:$CLIPBOARD}@tablet@2x.png\">",
+      "",
+      "\t<source media=\"(min-width: 1024px)\" srcset=\"images/${1:$CLIPBOARD}@desktop@1x.webp, images/${1:$CLIPBOARD}@desktop@2x.webp\" type=\"image/webp\">",
+      "\t<source media=\"(min-width: 1024px)\" srcset=\"images/${1:$CLIPBOARD}@desktop@1x.png, images/${1:$CLIPBOARD}@desktop@2x.png\">",
+      "",
+      "\t<source srcset=\"images/${1:$CLIPBOARD}@1x.webp, images/${1:$CLIPBOARD}@2x.webp\" type=\"image/webp\">",
+      "\t<img src=\"images/${1:$CLIPBOARD}@1x.png\" srcset=\"images/${1:$CLIPBOARD}@1x.png 1x, images/${1:$CLIPBOARD}@2x.png 2x\" alt=\"$0\" class=\"$2\">",
+      "</picture>"
+    ],
+    "description": "Адаптивная картинка с WebP/png, префиксами @1x/@2x, версиями для tablet/desktop и папкой images"
+  }
+}
