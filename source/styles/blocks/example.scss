@@ -1,0 +1,11 @@
+.example {
+  position: relative;
+}
+
+.example::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #bebdbd;
+  z-index: -1;
+}
