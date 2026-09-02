@@ -1,3 +1,13 @@
 .dealers {
   background-color: #ffffff;
 }
+
+.dealers__title {
+  color: var(--text-color-2, #111111);
+}
+
+.dealers__address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
