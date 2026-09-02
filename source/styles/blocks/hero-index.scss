@@ -8,10 +8,8 @@
     height: 50%;
     // width: 320px;
     // height: 302px;
-    background-color: #000;
-    background-image: linear-gradient(to right, var(--accent-background-2, rgba(105, 183, 56, 0.85)), var(--accent-background-2, rgba(105, 183, 56, 0.85))),
-      url(../../images/hero-index/hero-background@1x.jpg),
-      linear-gradient(to right, #4d4c52, #434248);
+    background-color: #65a73c;
+    background-image: linear-gradient(to right, var(--accent-background-2, rgba(105, 183, 56, 0.85)), var(--accent-background-2, rgba(105, 183, 56, 0.85))), url("../../images/hero-index/hero-background@1x.jpg"), linear-gradient(to right, #4d4c52, #434248);
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1;

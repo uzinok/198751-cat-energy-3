@@ -3,13 +3,12 @@
 @mixin font-face($name, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $name;
-    src: url('#{$path}.woff2') format('woff2'),
-    url('#{$path}.woff') format('woff');
+    src: url("#{$path}.woff2") format("woff2"), url("#{$path}.woff") format("woff");
     font-weight: $weight;
     font-style: $style;
     font-display: swap; // важно для производительности и UX
   }
 }
 
-@include font-face('Lato', '../../fonts/lato/lato-regular', 400, normal);
-@include font-face('Oswald', '../../fonts/oswald/oswaldregular', 400, normal);
+@include font-face("Lato", "../../fonts/lato/lato-regular", 400, normal);
+@include font-face("Oswald", "../../fonts/oswald/oswaldregular", 400, normal);
