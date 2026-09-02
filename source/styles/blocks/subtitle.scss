@@ -2,5 +2,8 @@
   margin-top: 0;
   font-family: var(--title-font-family, sans-serif);
   line-height: 1;
-  text-transform: uppercase;
+
+  &--big {
+    text-transform: uppercase;
+  }
 }
