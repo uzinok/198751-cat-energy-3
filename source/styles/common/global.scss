@@ -1,1 +1,30 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+html {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1220px;
+}

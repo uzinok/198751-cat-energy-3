@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Красивый тайтл</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
-  <body class="page__body">
+  <body>
 
     <!-- header -->
     <header class="header">
       <div class="container">
         <a class="header__logo logo" href="/">
           <picture>
-            <source media="(min-width: 1440px)" srcset="./images/logo@desktop.svg" type="image/svg+xml" width="70" height="59">
+            <source media="(min-width: 1200px)" srcset="./images/logo@desktop.svg" type="image/svg+xml" width="70" height="59">
             <source media="(min-width: 768px)" srcset="./images/logo@tablet.svg" type="image/svg+xml" width="60" height="50">
 
             <img class="logo__images" src="./images/logo.svg" alt="Cat Energy" width="33" height="38">
@@ -65,265 +65,265 @@
           <!-- catalog__list -->
           <div class="catalog__list">
             <!-- Курица -->
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/chicken-500@desktop@1x.webp 1x, images/catalog-products/chicken-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/chicken-500@desktop@1x.png 1x, images/catalog-products/chicken-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/chicken-500@desktop@1x.webp 1x, images/catalog-products/chicken-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/chicken-500@desktop@1x.png 1x, images/catalog-products/chicken-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/chicken-500@tablet@1x.png 1x, images/catalog-products/chicken-500@tablet@2x.png 2x" type="image/png" width="161" height="172">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/chicken-500@tablet@1x.webp 1x, images/catalog-products/chicken-500@tablet@2x.webp 2x" type="image/webp" width="161" height="172">
 
                   <source srcset="images/catalog-products/chicken-500@1x.webp 1x, images/catalog-products/chicken-500@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-image" src="images/catalog-products/chicken-500@1x.png" srcset="images/catalog-products/chicken-500@1x.png 1x, images/catalog-products/chicken-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом курицы" width="68" height="86">
+                  <img class="catalog-card__image" src="images/catalog-products/chicken-500@1x.png" srcset="images/catalog-products/chicken-500@1x.png 1x, images/catalog-products/chicken-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом курицы" width="68" height="86">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 500 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">500 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Курица</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">700 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">500 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Курица</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">700 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
 
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/chicken-1000@desktop@1x.webp 1x, images/catalog-products/chicken-1000@desktop@2x.webp 2x" type="image/webp" width="172" height="196">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/chicken-1000@desktop@1x.png 1x, images/catalog-products/chicken-1000@desktop@2x.png 2x" type="image/png" width="172" height="196">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/chicken-1000@desktop@1x.webp 1x, images/catalog-products/chicken-1000@desktop@2x.webp 2x" type="image/webp" width="172" height="196">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/chicken-1000@desktop@1x.png 1x, images/catalog-products/chicken-1000@desktop@2x.png 2x" type="image/png" width="172" height="196">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/chicken-1000@tablet@1x.webp 1x, images/catalog-products/chicken-1000@tablet@2x.webp 2x" type="image/webp" width="168" height="206">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/chicken-1000@tablet@1x.png 1x, images/catalog-products/chicken-1000@tablet@2x.png 2x" type="image/png" width="168" height="206">
 
                   <source srcset="images/catalog-products/chicken-1000@1x.webp 1x, images/catalog-products/chicken-1000@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-image" src="images/catalog-products/chicken-1000@1x.png" srcset="images/catalog-products/chicken-1000@1x.png 1x, images/catalog-products/chicken-1000@2x.png 2x" alt="Cat Energy PRO 1000 грамм со вкусом курицы" width="84" height="100">
+                  <img class="catalog-card__image" src="images/catalog-products/chicken-1000@1x.png" srcset="images/catalog-products/chicken-1000@1x.png 1x, images/catalog-products/chicken-1000@2x.png 2x" alt="Cat Energy PRO 1000 грамм со вкусом курицы" width="84" height="100">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 1000 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">1000 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Курица</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">1000 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">1000 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Курица</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">1000 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
             <!-- Курица -->
 
             <!-- Рыба -->
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/fish-500@desktop@1x.webp 1x, images/catalog-products/fish-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/fish-500@desktop@1x.png 1x, images/catalog-products/fish-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/fish-500@desktop@1x.webp 1x, images/catalog-products/fish-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/fish-500@desktop@1x.png 1x, images/catalog-products/fish-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/fish-500@tablet@1x.webp 1x, images/catalog-products/fish-500@tablet@2x.webp 2x" type="image/webp" width="161" height="172">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/fish-500@tablet@1x.png 1x, images/catalog-products/fish-500@tablet@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source srcset="images/catalog-products/fish-500@1x.webp 1x, images/catalog-products/fish-500@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-image" src="images/catalog-products/fish-500@1x.png" srcset="images/catalog-products/fish-500@1x.png 1x, images/catalog-products/fish-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом рыбы" width="68" height="86">
+                  <img class="catalog-card__image" src="images/catalog-products/fish-500@1x.png" srcset="images/catalog-products/fish-500@1x.png 1x, images/catalog-products/fish-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом рыбы" width="68" height="86">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 500 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">500 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Рыба</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">700 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">500 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Рыба</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">700 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
 
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/fish-1000@desktop@1x.webp 1x, images/catalog-products/fish-1000@desktop@2x.webp 2x" type="image/webp" width="172" height="196">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/fish-1000@desktop@1x.png 1x, images/catalog-products/fish-1000@desktop@2x.png 2x" type="image/png" width="172" height="196">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/fish-1000@desktop@1x.webp 1x, images/catalog-products/fish-1000@desktop@2x.webp 2x" type="image/webp" width="172" height="196">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/fish-1000@desktop@1x.png 1x, images/catalog-products/fish-1000@desktop@2x.png 2x" type="image/png" width="172" height="196">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/fish-1000@tablet@1x.webp 1x, images/catalog-products/fish-1000@tablet@2x.webp 2x" type="image/webp" width="168" height="206">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/fish-1000@tablet@1x.png 1x, images/catalog-products/fish-1000@tablet@2x.png 2x" type="image/png" width="168" height="206">
 
                   <source srcset="images/catalog-products/fish-1000@1x.webp 1x, images/catalog-products/fish-1000@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-image" src="images/catalog-products/fish-1000@1x.png" srcset="images/catalog-products/fish-1000@1x.png 1x, images/catalog-products/fish-1000@2x.png 2x" alt="Cat Energy PRO 1000 грамм со вкусом рыбы" width="84" height="100">
+                  <img class="catalog-card__image" src="images/catalog-products/fish-1000@1x.png" srcset="images/catalog-products/fish-1000@1x.png 1x, images/catalog-products/fish-1000@2x.png 2x" alt="Cat Energy PRO 1000 грамм со вкусом рыбы" width="84" height="100">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 1000 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">1000 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Рыба</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">1000 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">1000 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Рыба</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">1000 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
             <!-- Рыба -->
 
             <!-- Гречка -->
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/buckwheat-500@desktop@1x.webp 1x, images/catalog-products/buckwheat-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/buckwheat-500@desktop@1x.png 1x, images/catalog-products/buckwheat-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/buckwheat-500@desktop@1x.webp 1x, images/catalog-products/buckwheat-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/buckwheat-500@desktop@1x.png 1x, images/catalog-products/buckwheat-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/buckwheat-500@tablet@1x.webp 1x, images/catalog-products/buckwheat-500@tablet@2x.webp 2x" type="image/webp" width="161" height="172">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/buckwheat-500@tablet@1x.png 1x, images/catalog-products/buckwheat-500@tablet@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source srcset="images/catalog-products/buckwheat-500@1x.webp 1x, images/catalog-products/buckwheat-500@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-image" src="images/catalog-products/buckwheat-500@1x.png" srcset="images/catalog-products/buckwheat-500@1x.png 1x, images/catalog-products/buckwheat-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом гречки" width="68" height="86">
+                  <img class="catalog-card__image" src="images/catalog-products/buckwheat-500@1x.png" srcset="images/catalog-products/buckwheat-500@1x.png 1x, images/catalog-products/buckwheat-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом гречки" width="68" height="86">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 500 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">500 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Гречка</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">700 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">500 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Гречка</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">700 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
 
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/buckwheat-1000@desktop@1x.webp 1x, images/catalog-products/buckwheat-1000@desktop@2x.webp 2x" type="image/webp" width="172" height="196">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/buckwheat-1000@desktop@1x.png 1x, images/catalog-products/buckwheat-1000@desktop@2x.png 2x" type="image/png" width="172" height="196">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/buckwheat-1000@desktop@1x.webp 1x, images/catalog-products/buckwheat-1000@desktop@2x.webp 2x" type="image/webp" width="172" height="196">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/buckwheat-1000@desktop@1x.png 1x, images/catalog-products/buckwheat-1000@desktop@2x.png 2x" type="image/png" width="172" height="196">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/buckwheat-1000@tablet@1x.webp 1x, images/catalog-products/buckwheat-1000@tablet@2x.webp 2x" type="image/webp" width="168" height="206">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/buckwheat-1000@tablet@1x.png 1x, images/catalog-products/buckwheat-1000@tablet@2x.png 2x" type="image/png" width="168" height="206">
 
                   <source srcset="images/catalog-products/buckwheat-1000@1x.webp 1x, images/catalog-products/buckwheat-1000@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-image" src="images/catalog-products/buckwheat-1000@1x.png" srcset="images/catalog-products/buckwheat-1000@1x.png 1x, images/catalog-products/buckwheat-1000@2x.png 2x" alt="Cat Energy PRO 1000 грамм со вкусом гречки" width="84" height="100">
+                  <img class="catalog-card__image" src="images/catalog-products/buckwheat-1000@1x.png" srcset="images/catalog-products/buckwheat-1000@1x.png 1x, images/catalog-products/buckwheat-1000@2x.png 2x" alt="Cat Energy PRO 1000 грамм со вкусом гречки" width="84" height="100">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 1000 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">1000 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Гречка</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">1000 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">1000 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Гречка</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">1000 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
             <!-- Гречка -->
 
             <!-- Рис -->
-            <div class="catalog__item">
-              <a class="catalog__item-link" href="#" tabindex="-1">
+            <article class="catalog-card">
+              <a class="catalog-card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/rice-500@desktop@1x.webp 1x, images/catalog-products/rice-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
-                  <source media="(min-width: 1440px)" srcset="images/catalog-products/rice-500@desktop@1x.png 1x, images/catalog-products/rice-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/rice-500@desktop@1x.webp 1x, images/catalog-products/rice-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
+                  <source media="(min-width: 1200px)" srcset="images/catalog-products/rice-500@desktop@1x.png 1x, images/catalog-products/rice-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source media="(min-width: 768px)" srcset="images/catalog-products/rice-500@tablet@1x.webp 1x, images/catalog-products/rice-500@tablet@2x.webp 2x" type="image/webp" width="161" height="172">
                   <source media="(min-width: 768px)" srcset="images/catalog-products/rice-500@tablet@1x.png 1x, images/catalog-products/rice-500@tablet@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source srcset="images/catalog-products/rice-500@1x.webp 1x, images/catalog-products/rice-500@2x.webp 2x" type="image/webp">
-                  <img class="catalog__item-link" src="images/catalog-products/rice-500@1x.png" srcset="images/catalog-products/rice-500@1x.png 1x, images/catalog-products/rice-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом риса" width="68" height="86">
+                  <img class="catalog-card__link" src="images/catalog-products/rice-500@1x.png" srcset="images/catalog-products/rice-500@1x.png 1x, images/catalog-products/rice-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом риса" width="68" height="86">
                 </picture>
               </a>
-              <a class="catalog__item-link" href="#">
+              <a class="catalog-card__link" href="#">
                 <h3 class="title">Cat Energy PRO 500 г</h3>
               </a>
 
-              <ul class="catalog__definition-list definition-list">
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Масса</span>
-                  <span class="definition-list__description">500 г</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Вкус</span>
-                  <span class="definition-list__description">Рис</span>
-                </li>
-                <li class="definition-list__item">
-                  <span class="definition-list__term">Цена</span>
-                  <span class="definition-list__description">700 ₽</span>
-                </li>
-              </ul>
+              <dl class="catalog__definition-list definition-list">
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Масса</dt>
+                  <dd class="definition-list__description">500 г</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Вкус</dt>
+                  <dd class="definition-list__description">Рис</dd>
+                </div>
+                <div class="definition-list__item">
+                  <dt class="definition-list__term">Цена</dt>
+                  <dd class="definition-list__description">700 ₽</dd>
+                </div>
+              </dl>
 
               <a class="button" href="#">Заказать</a>
-            </div>
+            </article>
             <!-- Рис -->
 
             <!-- catalog__item-more -->
-            <div class="catalog__item catalog__item--more">
+            <article class="catalog-card catalog-card--more">
               <h3 class="title">Показать еще 100500 товаров</h3>
               <p>На самом деле вкусов гораздо больше!</p>
 
               <a class="button" href="#">Показать все</a>
-            </div>
+            </article>
             <!-- catalog__item-more -->
 
           </div>
