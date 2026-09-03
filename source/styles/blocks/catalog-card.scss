@@ -4,7 +4,7 @@
 
 .catalog-card__title {
   text-transform: uppercase;
-  color: #222222;
+  color: var(--text-color-2, #111111);
 }
 
 .catalog-card__more-text {
