@@ -10,6 +10,16 @@ body {
   min-width: 320px;
   height: 100%;
   margin: 0;
+  font-family: var(--basic-font-family, "Lato"), sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-color-1, #444444);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .visually-hidden {
@@ -22,9 +32,4 @@ body {
   white-space: nowrap;
   border: 0;
   clip-path: inset(100%);
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1220px;
 }

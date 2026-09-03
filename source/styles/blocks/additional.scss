@@ -1,3 +1,14 @@
-.additional {
-  position: relative;
+.additional__item-title {
+  text-transform: uppercase;
+  color: var(--text-color-3, #222222);
+}
+
+.additional__definition {
+  display: flex;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.additional__description {
+  margin: 0;
 }

@@ -1,3 +1,9 @@
-.definition-list {
-  position: relative;
+.definition-list__item {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.definition-list__description {
+  margin: 0;
 }

@@ -1,3 +1,14 @@
-.catalog-card {
-  position: relative;
+.catalog-card__link {
+  text-decoration: none;
+}
+
+.catalog-card__title {
+  text-transform: uppercase;
+  color: var(--text-color-2, #111111);
+}
+
+.catalog-card__more-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
 }

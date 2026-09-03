@@ -3,6 +3,38 @@
   appearance: none;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: var(--title-font-family, "Oswald"), sans-serif;
+  border: 0;
+
+  &--submit {
+    background-color: var(--button-background-submit, #68b738);
+    color: var(--button-color, #ffffff);
+  }
+
+  &--second {
+    background-color: var(--button-background-second, #f2f2f2);
+    color: var(--button-color-second, #444444);
+  }
+
+  &--icon {
+    background-color: transparent;
+    color: inherit;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 10px;
+      background-color: var(--icon-color-1, #000000);
+      mask-image: url("../../icons/stack.svg#button-arrow");
+      mask-position: -8px center;
+      mask-repeat: no-repeat;
+    }
+  }
 }
 
 .button::before {
