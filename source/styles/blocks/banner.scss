@@ -1,0 +1,11 @@
+.banner {
+  position: relative;
+}
+
+.banner--gift {
+  background-color: #65a73c;
+  background-image: linear-gradient(to right, var(--accent-background-2, #69b738d9), var(--accent-background-2, #69b738d9)), url("../../images/banner-gift/banner-background@1x.png"), linear-gradient(to right, #4d4c52, #434248);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--basic-background, #ffffff)
+}

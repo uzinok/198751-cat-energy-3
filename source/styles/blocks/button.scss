@@ -7,10 +7,16 @@
   font-size: 16px;
   line-height: 20px;
   font-family: var(--title-font-family, "Oswald"), sans-serif;
+  border: 0;
 
   &--submit {
-    background-color: var(--button-background, #68b738);
+    background-color: var(--button-background-submit, #68b738);
     color: var(--button-color, #ffffff);
+  }
+
+  &--second {
+    background-color: var(--button-background-second, #f2f2f2);
+    color: var(--button-color-second, #444444);
   }
 
   &--icon {

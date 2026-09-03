@@ -1,8 +1,8 @@
 .subtitle {
   margin-top: 0;
+  font-family: var(--title-font-family, "Oswald"), sans-serif;
 
   &--big {
-    font-family: var(--title-font-family, "Oswald"), sans-serif;
     line-height: 1;
     text-transform: uppercase;
   }
