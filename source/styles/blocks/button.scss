@@ -22,6 +22,18 @@
   &--icon {
     background-color: transparent;
     color: inherit;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 32px;
+      height: 10px;
+      background-color: var(--icon-color-1, #000000);
+      mask-image: url("../../icons/stack.svg#button-arrow");
+      mask-position: -8px center;
+      mask-repeat: no-repeat;
+    }
   }
 }
 
