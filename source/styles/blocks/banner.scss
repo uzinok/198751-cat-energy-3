@@ -8,4 +8,15 @@
   background-position: center;
   background-repeat: no-repeat;
   color: var(--basic-background, #ffffff);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 81px;
+    background-color: var(--icon-color-3, #ffffff);
+    mask-image: url("../../icons/stack.svg#gift");
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
 }
