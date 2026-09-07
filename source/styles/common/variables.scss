@@ -19,4 +19,28 @@
   --button-color: #ffffff;
   --button-background-second: #f2f2f2;
   --button-color-second: #444444;
+
+  --container-offset: 0 20px;
+
+  @media (min-width: 768px) {
+    --container-offset: 0 30px;
+  }
+
+  @media (min-width: 1440px) {
+    --container-offset: 0 110px;
+  }
 }
+
+$max-sm: 319px;
+$min-sm: 320px;
+
+$max-md: 767px;
+$min-md: 768px;
+
+$max-lg: 989px;
+$min-lg: 990px;
+
+$max-xl: 1200px;
+$min-xl: 1201px;
+
+$min-xxl: 1920px;
