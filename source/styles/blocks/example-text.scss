@@ -1,3 +1,7 @@
 .example-text {
-  display: flex;
+  font-family: var(--title-font-family, "Oswald"), sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--title-color, #000000);
+  text-transform: uppercase;
 }

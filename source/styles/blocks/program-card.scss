@@ -1,7 +1,35 @@
-.program-card::before {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #00ffff;
+.program-card {
+  position: relative;
+  background-color: var(--second-background, #f2f2f2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--icon-background, #68b738);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 67px;
+    height: 50px;
+    background-color: var(--icon-color-1, #000000);
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    mask-image: url("../../icons/stack.svg#program__slim");
+  }
+
+  &--fat::after {
+    mask-image: url("../../icons/stack.svg#program__fat");
+  }
 }

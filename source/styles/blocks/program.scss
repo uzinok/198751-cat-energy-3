@@ -1,3 +1,7 @@
-.program {
-  position: relative;
+.program__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }

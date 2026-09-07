@@ -1,3 +1,29 @@
-.social {
-  display: flex;
+.social__link {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 22px;
+  color: var(--icon-color-2, #666666);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  &--vk::before {
+    mask-image: url("../../icons/stack.svg#social__vk");
+  }
+
+  &--youtube::before {
+    mask-image: url("../../icons/stack.svg#social__youtube");
+  }
+
+  &--telegram::before {
+    mask-image: url("../../icons/stack.svg#social__telegram");
+  }
 }
