@@ -1,0 +1,15 @@
+@mixin font-face($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url("#{$path}.woff2") format("woff2"), url("#{$path}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap; // важно для производительности и UX
+  }
+}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: 1220px;
+  padding: var(--container-offset);
+}

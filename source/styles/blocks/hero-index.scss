@@ -1,27 +1,74 @@
 .hero-index {
+  padding-top: 0;
   position: relative;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    height: 50%;
-    // width: 320px;
-    // height: 302px;
+.hero-index__inner {
+  @media (min-width: $min-xl) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero-index__hgroup {
+  @media (max-width: $max-md) {
+    padding-top: 27px;
+    padding-bottom: 164px;
+    box-sizing: border-box;
+    min-height: 302px;
     background-color: #65a73c;
     background-image: linear-gradient(to right, var(--accent-background-2, rgba(105, 183, 56, 0.85)), var(--accent-background-2, rgba(105, 183, 56, 0.85))), url("../../images/hero-index/hero-background@1x.jpg"), linear-gradient(to right, #4d4c52, #434248);
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
+    margin-bottom: -135px;
+  }
+}
+
+.hero-index__container {
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    display: grid;
   }
 }
 
 .hero-index__title {
-  color: var(--text-background-color, #ffffff);
-  text-align: center;
+  @media (max-width: $max-md) {
+    text-align: center;
+    color: var(--text-background-color, #ffffff);
+  }
 }
 
 .hero-index__subtitle {
-  color: var(--text-background-color, #ffffff);
-  text-align: center;
+  margin: 0;
+
+  @media (max-width: $max-md) {
+    text-align: center;
+    color: var(--text-background-color, #ffffff);
+  }
+}
+
+.hero-index__picture {
+  display: block;
+  max-width: fit-content;
+  margin: 0 auto;
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    order: 2;
+  }
+
+  & img {
+    display: block;
+  }
+}
+
+.hero-index__button {
+  position: relative;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  z-index: 0;
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    bottom: -83px;
+  }
 }

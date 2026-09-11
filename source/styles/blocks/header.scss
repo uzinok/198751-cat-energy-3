@@ -1,3 +1,14 @@
-.header {
-  padding: 10px 15px;
+.header__container {
+  padding-top: 13px;
+  padding-bottom: 15px;
+
+  @media (min-width: $min-md) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $min-xl) {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 }
