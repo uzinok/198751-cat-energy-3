@@ -2,12 +2,12 @@
   padding-top: 13px;
   padding-bottom: 15px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-md) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 
-  @media (min-width: 1220px) {
+  @media (min-width: $min-xl) {
     padding-top: 55px;
     padding-bottom: 55px;
   }

@@ -1,7 +1,21 @@
 /* здесь используйте глобальные переменные */
+$max-sm: 319px;
+$min-sm: 320px;
+
+$max-md: 767px;
+$min-md: 768px;
+
+$max-lg: 989px;
+$min-lg: 990px;
+
+$max-xl: 1220px;
+$min-xl: 1221px;
+
+$min-xxl: 1440px;
+
 :root {
-  --basic-font-family: "Lato", sans-serif;
-  --title-font-family: "Oswald", sans-serif;
+  --basic-font-family: "Lato", Arial;
+  --title-font-family: "Oswald", Impact;
   --accent-background-1: #68b738;
   --accent-background-2: rgba(105, 183, 56, 0.85);
   --basic-background: #ffffff;
@@ -22,25 +36,11 @@
 
   --container-offset: 0 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-md) {
     --container-offset: 0 30px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $min-xxl) {
     --container-offset: 0 110px;
   }
 }
-
-$max-sm: 319px;
-$min-sm: 320px;
-
-$max-md: 767px;
-$min-md: 768px;
-
-$max-lg: 989px;
-$min-lg: 990px;
-
-$max-xl: 1200px;
-$min-xl: 1201px;
-
-$min-xxl: 1920px;
