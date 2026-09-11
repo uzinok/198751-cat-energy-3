@@ -4,7 +4,6 @@
 }
 
 .hero-index__inner {
-
   @media (min-width: $min-xl) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,7 +11,6 @@
 }
 
 .hero-index__hgroup {
-
   @media (max-width: $max-md) {
     padding-top: 27px;
     padding-bottom: 164px;
@@ -28,14 +26,12 @@
 }
 
 .hero-index__container {
-
   @media (min-width: $min-md) and (max-width: $max-xl) {
     display: grid;
   }
 }
 
 .hero-index__title {
-
   @media (max-width: $max-md) {
     text-align: center;
     color: var(--text-background-color, #ffffff);
