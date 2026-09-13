@@ -13,6 +13,10 @@ $min-xl: 1221px;
 
 $min-xxl: 1440px;
 
+$container-offset: 0 20px;
+$container-offset-tablet: 0 30px;
+$container-offset-desktop: 0 110px;
+
 :root {
   --basic-font-family: "Lato", arial;
   --title-font-family: "Oswald", impact;
