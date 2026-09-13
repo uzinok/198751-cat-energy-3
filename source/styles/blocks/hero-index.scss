@@ -7,10 +7,15 @@
   @media (min-width: $min-xl) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
   }
 }
 
 .hero-index__hgroup {
+  @media (max-width: $max-xl) {
+    @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
+  }
+
   @media (max-width: $max-md) {
     padding-top: 27px;
     padding-bottom: 164px;
@@ -28,6 +33,10 @@
 .hero-index__container {
   @media (min-width: $min-md) and (max-width: $max-xl) {
     display: grid;
+  }
+
+  @media (max-width: $max-xl) {
+    @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
   }
 }
 
