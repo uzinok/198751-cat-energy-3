@@ -1,19 +1,38 @@
 .hero-index {
   padding-top: 0;
   position: relative;
+
+  @media (min-width: $min-xl) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 50%;
+      height: 200%;
+      background-color: #65a73c;
+      background-image: linear-gradient(to right, var(--accent-background-2, rgba(105, 183, 56, 0.85)), var(--accent-background-2, rgba(105, 183, 56, 0.85))), url("../../images/hero-index/hero-background@desktop@1x.jpg"), linear-gradient(to right, #4d4c52, #434248);
+      background-repeat: no-repeat;
+      background-position: center, left bottom, center;
+      z-index: -1;
+    }
+  }
 }
 
-.hero-index__inner {
-  @media (min-width: $min-xl) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
+.hero-index__container {
+  @media (min-width: $min-md) {
     @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
+    display: grid;
+  }
+
+  @media (min-width: $min-xl) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
   }
 }
 
 .hero-index__hgroup {
-  @media (max-width: $max-xl) {
+  @media (max-width: $max-md) {
     @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
   }
 
@@ -29,15 +48,9 @@
     background-position: center;
     margin-bottom: -135px;
   }
-}
 
-.hero-index__container {
-  @media (min-width: $min-md) and (max-width: $max-xl) {
-    display: grid;
-  }
-
-  @media (max-width: $max-xl) {
-    @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
+  @media (min-width: $min-md) {
+    max-width: 500px;
   }
 }
 
@@ -66,6 +79,12 @@
     order: 2;
   }
 
+  @media (min-width: $min-xl) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+  }
+
   & img {
     display: block;
   }
@@ -76,7 +95,15 @@
   display: block;
   width: fit-content;
   height: fit-content;
+  box-sizing: border-box;
   z-index: 0;
+
+  @media (max-width: $max-md) {
+    width: 100%;
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     bottom: -83px;
