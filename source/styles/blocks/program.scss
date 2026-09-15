@@ -1,7 +1,12 @@
 .program__list {
   list-style-type: none;
   padding: 0;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media (min-width: $min-xl) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
