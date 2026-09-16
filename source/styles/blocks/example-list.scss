@@ -1,8 +1,7 @@
 .example-list {
   margin: 0;
   display: grid;
-  align-items: start;
-  justify-items: center;
+  place-items: start center;
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
