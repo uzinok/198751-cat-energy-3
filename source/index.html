@@ -10,7 +10,7 @@
   <body>
 
     <!-- header -->
-    <header class="header">
+    <header class="header no-js">
       <div class="header__container container">
         <a class="header__logo logo" href="index.html" aria-current="page">
           <picture>
@@ -26,19 +26,20 @@
         </a>
 
         <!-- nav -->
-        <nav class="header__nav nav">
+        <nav class="header__nav nav nav--index">
           <ul class="nav__list">
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="index.html" aria-current="page">Главная</a>
             </li>
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
+
         <button class="header__nav-toggle nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>

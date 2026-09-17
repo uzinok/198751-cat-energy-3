@@ -1,3 +1,7 @@
 .nav-toggle {
   appearance: none;
+
+  .no-js & {
+    display: none;
+  }
 }

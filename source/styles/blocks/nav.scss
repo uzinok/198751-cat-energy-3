@@ -1,5 +1,47 @@
 .nav {
-  position: relative;
+  .no-js & {
+    @media (max-width: $max-md) {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+  }
+
+  @media (min-width: $min-md) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $min-xl) {
+    max-width: 50%;
+  }
+}
+
+.nav__list {
+  margin: 15px 0 0;
+  padding: 0;
+  list-style-type: none;
+
+  .no-js & {
+    @media (max-width: $max-md) {
+      display: grid;
+    }
+  }
+
+  @media (min-width: $min-md) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+}
+
+.nav__item {
+  @media (max-width: $max-md) {
+    border-bottom: 1px solid #e6e6e6;
+
+    &:first-child {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
 }
 
 .nav__link {
@@ -12,8 +54,18 @@
   text-decoration: none;
   text-align: center;
 
+  @media (max-width: $max-md) {
+    padding: 22px 24px 24px;
+  }
+
   @media (min-width: $min-md) {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .nav--index & {
+    @media (min-width: $min-xl) {
+      color: #ffffff;
+    }
   }
 }

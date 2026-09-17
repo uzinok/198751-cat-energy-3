@@ -1,8 +1,14 @@
 .header__container {
+  position: relative;
   padding-top: 13px;
   padding-bottom: 15px;
 
+  .no-js & {
+    padding-bottom: 0;
+  }
+
   @media (min-width: $min-md) {
+    display: flex;
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -10,5 +16,16 @@
   @media (min-width: $min-xl) {
     padding-top: 55px;
     padding-bottom: 55px;
+  }
+}
+
+.header__logo-center {
+  @media (max-width: $max-md) {
+    .no-js & {
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
