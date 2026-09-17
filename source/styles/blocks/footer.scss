@@ -1,3 +1,13 @@
 .footer {
   background-color: var(--second-background, #f2f2f2);
 }
+#map {
+  width: 100%;
+  height: 362px; /* или любое нужное значение */
+}
+[class*="gotoymaps"],
+[class*="gototech"],
+[class*="copyrights-promo"],
+[class*="copyright"] {
+  display: none !important;
+}

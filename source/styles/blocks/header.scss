@@ -17,6 +17,14 @@
     padding-top: 55px;
     padding-bottom: 55px;
   }
+
+  .header:not(.no-js) & {
+    @media (max-width: $max-md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
 
 .header__logo-center {
