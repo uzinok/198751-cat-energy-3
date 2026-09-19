@@ -2,4 +2,11 @@
   position: relative;
 }
 
-.catalog__list {}
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 324px));
+
+  @media (min-width: $min-xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
