@@ -1,4 +1,6 @@
 /* в этот файл добавляет скрипты*/
+/* global ymaps */
+
 if (document.querySelector('.before-after') && document.querySelector('.before-after__range-js')) {
   const slider = document.querySelector('.before-after');
   const range = document.querySelector('.before-after__range-js');
@@ -29,7 +31,9 @@ if (document.querySelector('#map.dealers__map')) {
   script.addEventListener('load', () => {
     ymaps.ready(() => {
       const el = document.querySelector('.dealers__map');
-      if (!el) return;
+      if (!el) {
+        return;
+      }
 
       // Ждём, пока контейнер получит реальную ширину
       const init = () => {

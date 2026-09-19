@@ -2,22 +2,6 @@
   @media (max-width: $max-md) {
     margin-right: -20px;
     margin-left: -20px;
-
-    .header:not(.no-js) & {
-      top: 100%;
-      position: absolute;
-      width: 100%;
-      background-color: var(--basic-background, #ffffff);
-      z-index: 1;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
-
-      &.nav--open {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
   }
 
   @media (min-width: $min-md) {
@@ -28,6 +12,24 @@
     max-width: 50%;
   }
 }
+
+
+.header:not(.no-js) nav {
+  top: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: var(--basic-background, #ffffff);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+
+  &.nav--open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 
 .nav__list {
   margin: 0;
