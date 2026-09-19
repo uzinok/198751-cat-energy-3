@@ -13,6 +13,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
 }
 
@@ -66,4 +67,11 @@
 .dealers__map {
   position: absolute;
   inset: 0;
+
+  &.no-js {
+    background-image: url(../../images/map/footer-map@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }

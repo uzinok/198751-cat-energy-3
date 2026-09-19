@@ -318,12 +318,12 @@
             <!-- Рис -->
 
             <!-- catalog__item-more -->
-            <article class="catalog-card catalog-card--more">
+            <div class="catalog-card catalog-card--more">
               <h3 class="catalog-card__title title title--small">Показать еще 100500 товаров</h3>
               <p class="catalog-card__more-text">На самом деле вкусов гораздо больше!</p>
 
               <a class="button button--second" href="#">Показать все</a>
-            </article>
+            </div>
             <!-- catalog__item-more -->
 
           </div>
@@ -420,18 +420,20 @@
         </div>
         <!--  -->
         <div class="dealers__map-wrap">
-          <div class="dealers__map" id="map"></div>
+          <div class="dealers__map no-js" id="map"></div>
         </div>
         <!--  -->
       </section>
       <!-- dealers -->
 
-      <div class="container">
-        <a class="footer__logo-center logo-center" href="index.html" aria-current="page">
-          <img class="logo-center__images" src="./images/logo-text.svg" alt="Кет енерджи" width="128" height="24">
-        </a>
+      <div class="footer__container container">
+        <div class="footer__block">
+          <a class="footer__logo-center logo-center" href="index.html">
+            <img class="logo-center__images" src="./images/logo-text.svg" alt="Кет енерджи" width="128" height="24">
+          </a>
+        </div>
 
-        <ul class="footer__social social">
+        <ul class="footer__block footer__social social">
           <li>
             <a class="social__link social__link--vk" href="#">
               <span class="visually-hidden">ВК</span>
@@ -449,17 +451,13 @@
           </li>
         </ul>
 
-        <div class="footer__partners partners">
-          <a class="partners__logo logo" href="https://htmlacademy.ru/intensive/adaptive">
-            HTML Academy
-          </a>
-
-          <a class="partners__logo-center logo-center" href="https://htmlacademy.ru/intensive/adaptive"
-            tabindex="-1">
+        <p class="footer__block footer__partners partners">
+          HTML Academy
+          <a class="partners__logo-center logo-center" href="https://htmlacademy.ru/intensive/adaptive">
             <img class="logo-center__images" src="./images/logo-htmlacademy.svg" alt="htmlacademy" width="27"
               height="34">
           </a>
-        </div>
+        </p>
       </div>
     </footer>
     <!-- footer -->

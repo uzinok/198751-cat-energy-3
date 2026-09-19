@@ -1,5 +1,4 @@
 /* в этот файл добавляет скрипты*/
-/* global ymaps */
 
 if (document.querySelector('.before-after') && document.querySelector('.before-after__range-js')) {
   const slider = document.querySelector('.before-after');
@@ -22,6 +21,7 @@ if (document.querySelector('.header.no-js')) {
   });
 }
 
+/* global ymaps */
 if (document.querySelector('#map.dealers__map')) {
   const script = document.createElement('script');
   script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
@@ -35,17 +35,14 @@ if (document.querySelector('#map.dealers__map')) {
         return;
       }
 
-      // Ждём, пока контейнер получит реальную ширину
+      el.classList.remove('no-js');
+
       const init = () => {
         const myMap = new ymaps.Map('map', {
           center: [59.938631, 30.323037],
           zoom: 14.15,
           controls: []
-        }, {
-          suppressMapOpenBlock: true
         });
-
-        myMap.behaviors.disable(['scrollZoom', 'drag', 'dblClickZoom']);
 
         const myPlacemark = new ymaps.Placemark(
           [59.938631, 30.323037],
@@ -55,16 +52,13 @@ if (document.querySelector('#map.dealers__map')) {
             iconImageHref: '../images/map/map-pin.png',
             iconImageSize: [57, 53],
             iconImageOffset: [-28, -53],
-            suppressMapActions: true
           }
         );
 
         myMap.geoObjects.add(myPlacemark);
 
-        // 🔑 ключевой момент — подгоняем карту под текущий размер контейнера
         myMap.container.fitToViewport();
 
-        // И на ресайз окна тоже
         let t;
         window.addEventListener('resize', () => {
           clearTimeout(t);
@@ -76,7 +70,6 @@ if (document.querySelector('#map.dealers__map')) {
         }
       };
 
-      // Инициализация после отрисовки layout
       requestAnimationFrame(() => requestAnimationFrame(init));
     });
   });
