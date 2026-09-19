@@ -1,5 +1,6 @@
 /* GLOBAL */
 @import "./common/variables.scss";
+@import "./common/mixins.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 @import "./common/container.scss";
@@ -21,7 +22,6 @@
 @import "./blocks/how-work.scss";
 @import "./blocks/example.scss";
 @import "./blocks/example-list.scss";
-@import "./blocks/example-text.scss";
 @import "./blocks/before-after.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/dealers.scss";

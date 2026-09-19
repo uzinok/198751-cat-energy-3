@@ -1,28 +1,51 @@
 .program-card {
   position: relative;
+  padding: 21px 20px 18px;
   background-color: var(--second-background, #f2f2f2);
+
+  @media (min-width: $min-md) {
+    padding: 77px 316px 53px 52px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: var(--icon-background, #68b738);
+
+    @media (min-width: $min-md) {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 63px;
+    }
   }
 
   &::after {
     content: "";
+    top: 21px;
+    left: 12px;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 67px;
     height: 50px;
     background-color: var(--icon-color-1, #000000);
-    mask-position: center;
+    mask-position: center bottom;
     mask-repeat: no-repeat;
+
+    @media (min-width: $min-md) {
+      width: 268px;
+      height: 194px;
+      left: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 29px;
+    }
   }
 
   &--slim::after {
@@ -32,4 +55,14 @@
   &--fat::after {
     mask-image: url("../../icons/stack.svg#program__fat");
   }
+}
+
+.program-card__title {
+  @media (max-width: $max-md) {
+    margin-left: 90px;
+  }
+}
+
+.program-card__button {
+  padding-left: 0;
 }

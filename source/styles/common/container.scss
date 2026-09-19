@@ -1,4 +1,3 @@
 .container {
-  margin: 0 auto;
-  max-width: 1220px;
+  @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
 }

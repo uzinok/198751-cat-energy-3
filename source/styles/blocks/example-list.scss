@@ -1,11 +1,67 @@
+.example-list {
+  margin: 0;
+  display: grid;
+  place-items: start center;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
 .example-list__item {
-  width: fit-content;
-  border: 1px solid;
+  --out-bottom: 24px;
+  $border-color-example: #cdcdcd;
+  $border-width-example: 1px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 100%;
+  max-width: 124px;
+  margin-bottom: var(--out-bottom, 24px);
+  padding: 15px 18px;
+  text-align: center;
+  border-top: $border-width-example solid $border-color-example;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(-1 * $border-width-example);
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    border: $border-width-example solid $border-color-example;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * $border-width-example);
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    border: $border-width-example solid $border-color-example;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+  }
 }
 
 .example-list__term {
   font-size: 12px;
   line-height: 1;
+  max-width: 80px;
+  margin-bottom: calc(var(--out-bottom, 24px) * -1);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .example-list__description {
@@ -14,4 +70,24 @@
   color: var(--title-color, #000000);
   font-size: 24px;
   line-height: 1;
+  text-transform: uppercase;
+}
+
+.example-list__item-string {
+  display: flex;
+  font-family: var(--title-font-family, "Oswald"), sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--title-color, #000000);
+  text-transform: uppercase;
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-top: 34px;
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: auto;
+    margin-top: 0;
+  }
 }

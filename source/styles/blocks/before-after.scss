@@ -1,3 +1,74 @@
 .before-after {
+  --value: 50%;
   position: relative;
+  width: 280px;
+  height: 256px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000000;
+
+  @media (min-width: $min-md) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $min-xl) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+  }
+}
+
+.before-after__images {
+  position: absolute;
+  top: 0;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+
+  &--before {
+    left: 0;
+    width: var(--value);
+    object-position: left;
+  }
+
+  &--after {
+    right: 0;
+    width: calc(100% - var(--value));
+    object-position: right;
+  }
+}
+
+.before-after__range-visible {
+  position: absolute;
+  top: 0;
+  left: var(--value);
+  width: 4px;
+  height: 100%;
+  background-color: currentColor;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: currentColor;
+    background-image: url("../../img/comparision.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.before-after__range-js {
+  position: absolute;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+  inset: 0;
 }

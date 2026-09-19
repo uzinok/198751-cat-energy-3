@@ -7,6 +7,10 @@
   &--big {
     font-size: 36px;
     line-height: 1;
+
+    @media (min-width: $min-md) {
+      font-size: 60px;
+    }
   }
 
   &--medium {

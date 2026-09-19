@@ -1,3 +1,42 @@
 .nav-toggle {
-  appearance: none;
+  display: none;
+
+  @media (max-width: $max-md) {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: none;
+    appearance: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--icon-color-1, #000000);
+      mask-image: url("../../icons/stack.svg#nav-toggle__open");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      opacity: 1;
+      transition: opacity 250ms ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--icon-color-1, #000000);
+      mask-image: url("../../icons/stack.svg#nav-toggle__close");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      opacity: 0;
+      transition: opacity 250ms ease-in-out;
+    }
+
+    header:not(.no-js) & {
+      display: block;
+    }
+  }
 }

@@ -1,8 +1,40 @@
 .dealers {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   background-color: #ffffff;
 }
 
+.dealers__container {
+  @media (min-width: $min-xl) {
+    position: absolute;
+    inset: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.dealers__inner {
+  display: flex;
+  gap: 20px;
+
+  @media (max-width: $max-lg) {
+    width: 100%;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    display: block;
+    background-color: #ffffff;
+  }
+}
+
 .dealers__title {
+  flex: auto;
   color: var(--text-color-2, #111111);
 }
 
@@ -10,4 +42,28 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  @media (max-width: $max-lg) {
+    width: 50%;
+  }
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    text-align: right;
+  }
+}
+
+.dealers__address-sity {
+  @media (min-width: $min-md) {
+    display: block;
+  }
+}
+
+.dealers__map-wrap {
+  position: relative;
+  height: 362px;
+}
+
+.dealers__map {
+  position: absolute;
+  inset: 0;
 }

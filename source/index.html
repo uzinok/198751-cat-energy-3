@@ -10,11 +10,11 @@
   <body>
 
     <!-- header -->
-    <header class="header">
-      <div class="container">
+    <header class="header no-js">
+      <div class="header__container container">
         <a class="header__logo logo" href="index.html" aria-current="page">
           <picture>
-            <source media="(min-width: 1200px)" srcset="./images/logo@desktop.svg" type="image/svg+xml" width="70" height="59">
+            <source media="(min-width: 1220px)" srcset="./images/logo@desktop.svg" type="image/svg+xml" width="70" height="59">
             <source media="(min-width: 768px)" srcset="./images/logo@tablet.svg" type="image/svg+xml" width="60" height="50">
 
             <img class="logo__images" src="./images/logo.svg" alt="Cat Energy" width="33" height="38">
@@ -26,19 +26,20 @@
         </a>
 
         <!-- nav -->
-        <nav class="header__nav nav">
+        <nav class="header__nav nav nav--index">
           <ul class="nav__list">
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="index.html" aria-current="page">Главная</a>
             </li>
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
+
         <button class="header__nav-toggle nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -51,13 +52,15 @@
     <main>
       <!-- hero-index -->
       <section class="hero hero-index">
-        <div class="container">
-          <h1 class="hero-index__title title title--big">Функциональное питание для&nbsp;котов</h1>
-          <p class="hero-index__subtitle subtitle subtitle--big">Занялся собой? Займись котом!</p>
+        <div class="hero-index__container">
+          <hgroup class="hero-index__hgroup">
+              <h1 class="hero-index__title title title--big">Функциональное питание для&nbsp;котов</h1>
+              <p class="hero-index__subtitle subtitle subtitle--big">Занялся собой? Займись котом!</p>
+          </hgroup>
 
-          <picture>
-            <source media="(min-width: 1200px)" srcset="images/hero-index/hero-product@desktop@1x.webp 1x, images/hero-index/hero-product@desktop@2x.webp 2x" type="image/webp" width="709" height="609">
-            <source media="(min-width: 1200px)" srcset="images/hero-index/hero-product@desktop@1x.png 1x, images/hero-index/hero-product@desktop@2x.png 2x" type="image/png" width="709" height="609">
+          <picture class="hero-index__picture">
+            <source media="(min-width: 1220px)" srcset="images/hero-index/hero-product@desktop@1x.webp 1x, images/hero-index/hero-product@desktop@2x.webp 2x" type="image/webp" width="709" height="609">
+            <source media="(min-width: 1220px)" srcset="images/hero-index/hero-product@desktop@1x.png 1x, images/hero-index/hero-product@desktop@2x.png 2x" type="image/png" width="709" height="609">
 
             <source media="(min-width: 768px)" srcset="images/hero-index/hero-product@tablet@1x.webp 1x, images/hero-index/hero-product@tablet@2x.webp 2x" type="image/webp" width="552" height="499">
             <source media="(min-width: 768px)" srcset="images/hero-index/hero-product@tablet@1x.png 1x, images/hero-index/hero-product@tablet@2x.png 2x" type="image/png" width="552" height="499">
@@ -73,7 +76,7 @@
 
       <!-- program -->
       <section class="program">
-        <div class="container">
+        <div class="program__container container">
           <h2 class="visually-hidden">Программы питания</h2>
 
           <!-- program__list -->
@@ -119,7 +122,7 @@
 
       <!-- example -->
       <section class="example">
-        <div class="container">
+        <div class="example__container container">
           <h2 class="title title--big">Живой пример</h2>
           <p class="subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
@@ -134,13 +137,14 @@
               <dt class="example-list__term">затрачено времени</dt>
               <dd class="example-list__description">60 дней</dd>
             </div>
+
+            <div class="example-list__item-string">
+              <dt class="example-list__term-string">Затраты на питание:</dt>
+              <dd class="example-list__description-string">15 000 РУБ.</dd>
+            </div>
           </dl>
           <!-- example-list -->
 
-          <p class="example-text">
-            Затраты на питание:
-            <span class="example-text__price">15 000 РУБ.</span>
-          </p>
 
           <!-- before-after -->
           <div class="example__before-after before-after">
@@ -160,7 +164,7 @@
             </picture>
 
             <label class="visually-hidden" for="before-after-range">Показать картинку до или после</label>
-            <input class="before-after__range-js" type="range" min="0" max="100" value="50" step="1" id="before-after-range" name="before-after-range">
+            <input class="before-after__range-js" type="range" min="0" max="1000" value="500" step="1" id="before-after-range" name="before-after-range">
             <div class="before-after__range-visible"></div>
           </div>
           <!-- before-after -->
@@ -174,15 +178,19 @@
     <footer class="footer">
       <!-- dealers -->
       <section class="dealers">
-        <div class="container">
-          <h2 class="dealers__title title title--small">Приглашаем к сотрудничеству дилеров!</h2>
-          <address class="dealers__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </address>
-          <!--  -->
-          <div>Добавить интерактивную карту</div>
-          <!--  -->
+        <div class="dealers__container container">
+          <div class="dealers__inner">
+            <h2 class="dealers__title title title--small">Приглашаем к сотрудничеству дилеров!</h2>
+            <address class="dealers__address">
+              ул. Большая Конюшенная, д. 19/8 <span class="dealers__address-sity">Санкт-Петербург</span>
+            </address>
+          </div>
         </div>
+          <!--  -->
+          <div class="dealers__map-wrap">
+            <div class="dealers__map" id="map"></div>
+          </div>
+          <!--  -->
       </section>
       <!-- dealers -->
 
