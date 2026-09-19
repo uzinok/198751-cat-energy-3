@@ -21,34 +21,57 @@ if (document.querySelector('.header.no-js')) {
 }
 
 const script = document.createElement('script');
-script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU'; // если есть ключ — добавь, если нет — можно без него
+script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
 script.type = 'text/javascript';
 document.head.appendChild(script);
 
 script.addEventListener('load', () => {
   ymaps.ready(() => {
-    const myMap = new ymaps.Map('map', {
-      center: [59.938631, 30.323037],
-      zoom: 14,
-      controls: [] // убираем все элементы управления
-    }, {
-      suppressMapOpenBlock: true // именно здесь, во втором аргументе
-    });
+    const el = document.querySelector('.dealers__map');
+    if (!el) return;
 
-    myMap.behaviors.disable(['scrollZoom', 'drag', 'dblClickZoom']);
+    // Ждём, пока контейнер получит реальную ширину
+    const init = () => {
+      const myMap = new ymaps.Map('map', {
+        center: [59.938631, 30.323037],
+        zoom: 14.15,
+        controls: []
+      }, {
+        suppressMapOpenBlock: true
+      });
 
-    const myPlacemark = new ymaps.Placemark(
-      [59.938631, 30.323037],
-      { hintContent: 'Мы тут' },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '../images/map/map-pin.png',
-        iconImageSize: [57, 53],
-        iconImageOffset: [-28, -53],
-        suppressMapActions: true
+      myMap.behaviors.disable(['scrollZoom', 'drag', 'dblClickZoom']);
+
+      const myPlacemark = new ymaps.Placemark(
+        [59.938631, 30.323037],
+        { hintContent: 'Мы тут' },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '../images/map/map-pin.png',
+          iconImageSize: [57, 53],
+          iconImageOffset: [-28, -53],
+          suppressMapActions: true
+        }
+      );
+
+      myMap.geoObjects.add(myPlacemark);
+
+      // 🔑 ключевой момент — подгоняем карту под текущий размер контейнера
+      myMap.container.fitToViewport();
+
+      // И на ресайз окна тоже
+      let t;
+      window.addEventListener('resize', () => {
+        clearTimeout(t);
+        t = setTimeout(() => myMap.container.fitToViewport(), 150);
+      });
+      if ('ResizeObserver' in window) {
+        const ro = new ResizeObserver(() => myMap.container.fitToViewport());
+        ro.observe(document.querySelector('.dealers__map'));
       }
-    );
+    };
 
-    myMap.geoObjects.add(myPlacemark);
+    // Инициализация после отрисовки layout
+    requestAnimationFrame(() => requestAnimationFrame(init));
   });
 });
