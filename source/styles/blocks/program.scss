@@ -1,8 +1,13 @@
+.program__container {
+  padding-bottom: 23px;
+}
+
 .program__list {
-  list-style-type: none;
-  padding: 0;
   display: grid;
   gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   @media (min-width: $min-xl) {
     grid-template-columns: 1fr 1fr;

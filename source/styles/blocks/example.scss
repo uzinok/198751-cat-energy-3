@@ -11,8 +11,18 @@
 }
 
 .example__container {
+  padding-top: 27px;
+
   @media (min-width: $min-xl) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.example__title {
+  margin-bottom: 43px;
+}
+
+.example__subtitle {
+  margin: 0 0 20px;
 }

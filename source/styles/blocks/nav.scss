@@ -72,9 +72,18 @@
   line-height: 1;
   text-decoration: none;
   text-align: center;
+  transition: opacity 250ms ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (max-width: $max-md) {
-    padding: 22px 24px 24px;
+    padding: 23px 24px 22px;
   }
 
   @media (min-width: $min-md) {

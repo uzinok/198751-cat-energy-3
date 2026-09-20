@@ -1,6 +1,7 @@
 .example-list {
-  margin: 0;
+  margin: 0 0 19px;
   display: grid;
+  gap: 0 33px;
   place-items: start center;
   grid-template-columns: 1fr 1fr;
 
@@ -11,7 +12,6 @@
 }
 
 .example-list__item {
-  --out-bottom: 24px;
   $border-color-example: #cdcdcd;
   $border-width-example: 1px;
   position: relative;
@@ -21,8 +21,7 @@
   gap: 8px;
   width: 100%;
   max-width: 124px;
-  margin-bottom: var(--out-bottom, 24px);
-  padding: 15px 18px;
+  padding: 13px 18px;
   text-align: center;
   border-top: $border-width-example solid $border-color-example;
   border-radius: 3px;
@@ -32,9 +31,9 @@
     content: "";
     position: absolute;
     top: calc(-1 * $border-width-example);
-    bottom: 0;
     left: 0;
-    width: 5px;
+    height: 55px;
+    width: 17px;
     border: $border-width-example solid $border-color-example;
     border-top: 0;
     border-right: 0;
@@ -45,9 +44,9 @@
     content: "";
     position: absolute;
     top: calc(-1 * $border-width-example);
-    bottom: 0;
+    height: 55px;
     right: 0;
-    width: 5px;
+    width: 18px;
     border: $border-width-example solid $border-color-example;
     border-top: 0;
     border-left: 0;
@@ -59,13 +58,12 @@
   font-size: 12px;
   line-height: 1;
   max-width: 80px;
-  margin-bottom: calc(var(--out-bottom, 24px) * -1);
   margin-right: auto;
   margin-left: auto;
 }
 
 .example-list__description {
-  margin: 0;
+  margin: 0 0 1px;
   font-family: var(--title-font-family, "Oswald"), sans-serif;
   color: var(--title-color, #000000);
   font-size: 24px;
@@ -75,6 +73,7 @@
 
 .example-list__item-string {
   display: flex;
+  gap: 6px;
   font-family: var(--title-font-family, "Oswald"), sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -82,7 +81,7 @@
   text-transform: uppercase;
   text-align: center;
   grid-column: 1 / -1;
-  margin-top: 34px;
+  margin-top: 6px;
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     flex-direction: column;
@@ -90,4 +89,8 @@
     grid-column: auto;
     margin-top: 0;
   }
+}
+
+.example-list__description-string {
+  margin: 0;
 }

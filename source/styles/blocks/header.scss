@@ -1,7 +1,7 @@
 .header__container {
   position: relative;
   padding-top: 13px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 
   .no-js & {
     padding-bottom: 0;
@@ -21,6 +21,7 @@
   .header:not(.no-js) & {
     @media (max-width: $max-md) {
       display: flex;
+      gap: 20px;
       align-items: center;
       justify-content: space-between;
     }

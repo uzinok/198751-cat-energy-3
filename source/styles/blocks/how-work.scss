@@ -1,3 +1,11 @@
+.how-work__container {
+  padding-bottom: 49px;
+}
+
+.how-work__title {
+  margin-bottom: 42px;
+}
+
 .how-work__list {
   margin: 0;
   padding: 0;
@@ -21,7 +29,9 @@
   --top-icon: 0;
   position: relative;
   min-height: var(--size-icon, 60px);
+  padding-top: 3px;
   padding-left: 80px;
+  box-sizing: border-box;
 
   @media (min-width: $min-md) {
     --size-icon: 80px;

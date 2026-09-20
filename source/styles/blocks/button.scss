@@ -1,3 +1,9 @@
+@property --mask-position-x {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: -6px;
+}
+
 .button {
   appearance: none;
   display: inline-block;
@@ -13,6 +19,15 @@
   &--submit {
     background-color: var(--button-background-submit, #68b738);
     color: var(--button-color, #ffffff);
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
+    &:hover {
+      background-color: var(--button-background-submit-hover, #5eaa2f);
+    }
+
+    &:active {
+      color: var(--button-color-active, rgba(255, 255, 255, 0.3));
+    }
   }
 
   &--second {
@@ -20,9 +35,19 @@
     color: var(--button-color-second, #444444);
   }
 
-  &--icon {
+  &--arrow {
+    --mask-position-x: -6px;
     background-color: transparent;
     color: inherit;
+    transition: --mask-position-x 250ms ease-in-out, opacity 250ms ease-in-out;
+
+    &:hover {
+      --mask-position-x: -1px;          // ← меняем переменную, а не mask-position
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     &::after {
       content: "";
@@ -30,9 +55,11 @@
       vertical-align: middle;
       width: 32px;
       height: 10px;
+      margin-left: 17px;
+      margin-top: -8px;
       background-color: var(--icon-color-1, #000000);
       mask-image: url("../../icons/stack.svg#button-arrow");
-      mask-position: -8px center;
+      mask-position: var(--mask-position-x, -6px) center;
       mask-repeat: no-repeat;
     }
   }

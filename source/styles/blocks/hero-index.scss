@@ -20,6 +20,8 @@
 }
 
 .hero-index__container {
+  padding-bottom: 20px;
+
   @media (min-width: $min-md) {
     @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
     display: grid;
@@ -73,7 +75,7 @@
 .hero-index__picture {
   display: block;
   max-width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 3px;
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     order: 2;
@@ -94,6 +96,8 @@
   display: block;
   width: fit-content;
   height: fit-content;
+  padding-top: 11px;
+  padding-bottom: 9px;
   box-sizing: border-box;
   z-index: 0;
 

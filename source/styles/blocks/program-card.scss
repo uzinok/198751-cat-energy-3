@@ -1,6 +1,6 @@
 .program-card {
   position: relative;
-  padding: 21px 20px 18px;
+  padding: 21px 20px 4px;
   background-color: var(--second-background, #f2f2f2);
 
   @media (min-width: $min-md) {
@@ -53,14 +53,24 @@
   }
 
   &--fat::after {
+    top: 24px;
     mask-image: url("../../icons/stack.svg#program__fat");
   }
 }
 
 .program-card__title {
+  margin-bottom: 30px;
+
   @media (max-width: $max-md) {
-    margin-left: 90px;
+    margin-left: 70px;
+    margin-top: 8px;
   }
+}
+
+.program-card__text {
+  padding-bottom: 22px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 4px;
 }
 
 .program-card__button {
