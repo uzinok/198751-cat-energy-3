@@ -49,7 +49,7 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 33px;
+    gap: 24px;
   }
 }
 
@@ -74,11 +74,11 @@
   text-align: center;
   transition: opacity 250ms ease-in-out;
 
-  &:hover {
+  &:hover:not([aria-current="page"]) {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active:not([aria-current="page"]) {
     opacity: 0.3;
   }
 
@@ -87,8 +87,22 @@
   }
 
   @media (min-width: $min-md) {
+    position: relative;
+    padding: 14px 5px;
     font-size: 18px;
     line-height: 24px;
+
+    &[aria-current="page"] {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 5px;
+        bottom: 4px;
+        left: 5px;
+        height: 2px;
+        background-color: var(--icon-background, #68b738);
+      }
+    }
   }
 
   .nav--index & {

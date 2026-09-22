@@ -1,3 +1,3 @@
 .container {
-  @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
+  @include container($max-width-container, $container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
 }

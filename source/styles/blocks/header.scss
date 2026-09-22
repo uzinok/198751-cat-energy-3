@@ -9,6 +9,7 @@
 
   @media (min-width: $min-md) {
     display: flex;
+    gap: 0 13px;
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -36,5 +37,9 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  @media (min-width: $min-md) {
+    margin-top: 16px;
   }
 }

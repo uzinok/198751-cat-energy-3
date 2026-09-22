@@ -43,10 +43,21 @@
   left: var(--value);
   width: 4px;
   height: 100%;
-  background-color: #666666;
+  color: #666666;
+  background-color: currentColor;
   border-radius: 4px;
   transform: translateX(-50%);
   pointer-events: none;
+  transition: color 250ms ease-in-out, opacity 250ms ease-in-out;
+
+  .before-after__range:hover + & {
+    color: var(--button-background-submit, #68b738);
+  }
+
+  .before-after__range:active + & {
+    color: var(--button-background-submit-hover, #5eaa2f);
+    opacity: 0.6;
+  }
 
   &::before {
     content: "";
@@ -55,11 +66,23 @@
     left: 50%;
     width: 40px;
     height: 40px;
-    background-color: #666666;
-    background-image: url("../../icons/stack.svg#before-after__range-button");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: currentColor;
+    mask-image: url("../../icons/stack.svg#before-after__range-button");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }

@@ -8,16 +8,19 @@
   }
 }
 
-@mixin container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl) {
+@mixin container($max-width-container, $container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl) {
   margin: 0 auto;
-  max-width: 1220px;
-  padding: $container-offset;
+  max-width: $max-width-container;
+  padding-right: $container-offset;
+  padding-left: $container-offset;
 
   @media (min-width: $min-md) {
-    padding: $container-offset-tablet;
+    padding-right: $container-offset-tablet;
+    padding-left: $container-offset-tablet;
   }
 
   @media (min-width: $min-xxl) {
-    padding: $container-offset-desktop;
+    padding-right: $container-offset-desktop;
+    padding-left: $container-offset-desktop;
   }
 }

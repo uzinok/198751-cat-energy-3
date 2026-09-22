@@ -4,7 +4,7 @@
   background-color: var(--second-background, #f2f2f2);
 
   @media (min-width: $min-md) {
-    padding: 77px 316px 53px 52px;
+    padding: 77px 316px 44px 52px;
   }
 
   &::before {
@@ -21,7 +21,7 @@
       width: 200px;
       height: 200px;
       left: auto;
-      top: 50%;
+      top: 52%;
       transform: translateY(-50%);
       right: 63px;
     }
@@ -42,7 +42,7 @@
       width: 268px;
       height: 194px;
       left: auto;
-      top: 50%;
+      top: 48%;
       transform: translateY(-50%);
       right: 29px;
     }
@@ -55,6 +55,10 @@
   &--fat::after {
     top: 24px;
     mask-image: url("../../icons/stack.svg#program__fat");
+
+    @media (min-width: $min-md) {
+      top: 51.5%;
+    }
   }
 }
 
@@ -65,12 +69,25 @@
     margin-left: 70px;
     margin-top: 8px;
   }
+
+  @media (min-width: $min-md) {
+    margin-bottom: 24px;
+  }
 }
 
 .program-card__text {
-  padding-bottom: 22px;
-  border-bottom: 1px solid #d9d9d9;
+  margin-top: 0;
   margin-bottom: 4px;
+
+  @media (max-width: $max-md) {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: $min-md) {
+    color: var(--title-color, #000000);
+    margin-bottom: 40px;
+  }
 }
 
 .program-card__button {

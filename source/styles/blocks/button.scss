@@ -16,6 +16,11 @@
   font-family: var(--title-font-family, "Oswald"), sans-serif;
   border: 0;
 
+  @media (min-width: $min-md) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
   &--submit {
     background-color: var(--button-background-submit, #68b738);
     color: var(--button-color, #ffffff);
@@ -61,6 +66,10 @@
       mask-image: url("../../icons/stack.svg#button-arrow");
       mask-position: var(--mask-position-x, -6px) center;
       mask-repeat: no-repeat;
+
+      @media (min-width: $min-md) {
+        margin-left: 25px;
+      }
     }
   }
 }

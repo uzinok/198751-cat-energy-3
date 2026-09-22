@@ -18,8 +18,10 @@
 }
 
 .dealers__inner {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 27px;
+  padding-bottom: 14px;
 
   @media (max-width: $max-lg) {
     width: 100%;
@@ -37,16 +39,14 @@
 .dealers__title {
   flex: auto;
   color: var(--text-color-2, #111111);
+  text-transform: uppercase;
+  padding-right: 15px;
 }
 
 .dealers__address {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
-
-  @media (max-width: $max-lg) {
-    width: 50%;
-  }
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     text-align: right;

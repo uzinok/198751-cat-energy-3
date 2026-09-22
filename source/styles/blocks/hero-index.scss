@@ -22,8 +22,17 @@
 .hero-index__container {
   padding-bottom: 20px;
 
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    box-sizing: border-box;
+  }
+
   @media (min-width: $min-md) {
-    @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
+    max-width: $max-width-container;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-right: $container-offset;
+    padding-bottom: 0;
+    padding-left: $container-offset-tablet;
     display: grid;
   }
 
@@ -35,10 +44,7 @@
 
 .hero-index__hgroup {
   @media (max-width: $max-md) {
-    @include container($container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
-  }
-
-  @media (max-width: $max-md) {
+    @include container($max-width-container, $container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl);
     padding-top: 27px;
     padding-bottom: 164px;
     box-sizing: border-box;
@@ -53,6 +59,7 @@
 
   @media (min-width: $min-md) {
     max-width: 500px;
+    margin-left: 90px;
   }
 }
 
@@ -73,12 +80,21 @@
 }
 
 .hero-index__picture {
+  position: relative;
   display: block;
-  max-width: fit-content;
   margin: 0 auto 3px;
+  z-index: -1;
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     order: 2;
+  }
+
+  @media (min-width: $min-md) {
+    width: 709px;
+    height: 609px;
+    margin-top: -32px;
+    transform: translateX(-5px);
+    margin-bottom: 0;
   }
 
   @media (min-width: $min-xl) {
@@ -88,6 +104,13 @@
 
   & img {
     display: block;
+    width: 280px;
+    height: 270px;
+
+    @media (min-width: $min-md) {
+      width: 709px;
+      height: 609px;
+    }
   }
 }
 
@@ -109,6 +132,11 @@
   }
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
-    bottom: -83px;
+    bottom: -51px;
+  }
+
+  @media (min-width: $min-md) {
+    margin-left: 90px;
+    padding: 15px 27px 13px;
   }
 }

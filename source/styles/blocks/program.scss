@@ -9,6 +9,10 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: $min-md) {
+    gap: 30px;
+  }
+
   @media (min-width: $min-xl) {
     grid-template-columns: 1fr 1fr;
     gap: 80px;

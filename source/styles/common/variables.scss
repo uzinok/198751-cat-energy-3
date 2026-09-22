@@ -28,9 +28,10 @@ $max-xl: $min-xl - 0.02px;   // 1219.98px
 $max-xxl: $min-xxl - 0.02px; // 1439.98px
 
 
-$container-offset: 0 20px;
-$container-offset-tablet: 0 30px;
-$container-offset-desktop: 0 110px;
+$container-offset: 20px;
+$container-offset-tablet: 30px;
+$container-offset-desktop: 110px;
+$max-width-container: 1220px;
 
 :root {
   --basic-font-family: "Lato", arial;
@@ -54,14 +55,4 @@ $container-offset-desktop: 0 110px;
   --button-color-active: rgba(255, 255, 255, 0.3);
   --button-background-second: #f2f2f2;
   --button-color-second: #444444;
-
-  --container-offset: 0 20px;
-
-  @media (min-width: $min-md) {
-    --container-offset: 0 30px;
-  }
-
-  @media (min-width: $min-xxl) {
-    --container-offset: 0 110px;
-  }
 }

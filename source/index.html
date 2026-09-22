@@ -59,11 +59,11 @@
           </hgroup>
 
           <picture class="hero-index__picture">
-            <source media="(min-width: 1220px)" srcset="images/hero-index/hero-product@desktop@1x.webp 1x, images/hero-index/hero-product@desktop@2x.webp 2x" type="image/webp" width="709" height="609">
-            <source media="(min-width: 1220px)" srcset="images/hero-index/hero-product@desktop@1x.png 1x, images/hero-index/hero-product@desktop@2x.png 2x" type="image/png" width="709" height="609">
+            <source media="(min-width: 1220px)" srcset="images/hero-index/hero-product@desktop@1x.webp 1x, images/hero-index/hero-product@desktop@2x.webp 2x" type="image/webp" width="552" height="499">
+            <source media="(min-width: 1220px)" srcset="images/hero-index/hero-product@desktop@1x.png 1x, images/hero-index/hero-product@desktop@2x.png 2x" type="image/png" width="552" height="499">
 
-            <source media="(min-width: 768px)" srcset="images/hero-index/hero-product@tablet@1x.webp 1x, images/hero-index/hero-product@tablet@2x.webp 2x" type="image/webp" width="552" height="499">
-            <source media="(min-width: 768px)" srcset="images/hero-index/hero-product@tablet@1x.png 1x, images/hero-index/hero-product@tablet@2x.png 2x" type="image/png" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="images/hero-index/hero-product@tablet@1x.webp 1x, images/hero-index/hero-product@tablet@2x.webp 2x" type="image/webp" width="709" height="609">
+            <source media="(min-width: 768px)" srcset="images/hero-index/hero-product@tablet@1x.png 1x, images/hero-index/hero-product@tablet@2x.png 2x" type="image/png" width="709" height="609">
 
             <source srcset="images/hero-index/hero-product@1x.webp 1x, images/hero-index/hero-product@2x.webp 2x" type="image/webp">
             <img class="hero-index__product" src="images/hero-index/hero-product@1x.png" srcset="images/hero-index/hero-product@1x.png 1x, images/hero-index/hero-product@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом курицы" width="280" height="270">
@@ -167,7 +167,8 @@
             </picture>
 
             <label class="visually-hidden" for="before-after-range">Показать картинку до или после</label>
-            <input class="before-after__range-js" type="range" min="0" max="1000" value="500" step="1" id="before-after-range" name="before-after-range">
+            <input class="before-after__range-js before-after__range" type="range" min="0" max="1000" value="500"
+              step="1" id="before-after-range" name="before-after-range">
             <div class="before-after__range-visible"></div>
           </div>
           <!-- before-after -->
@@ -183,7 +184,7 @@
       <section class="dealers">
         <div class="dealers__container container">
           <div class="dealers__inner">
-            <h2 class="dealers__title title title--small">Приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="dealers__title title title--small">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <address class="dealers__address">
               ул. Большая Конюшенная, д. 19/8 <span class="dealers__address-sity">Санкт-Петербург</span>
             </address>
@@ -222,12 +223,9 @@
           </li>
         </ul>
 
-        <p class="footer__block footer__partners partners">
+        <a class="footer__block footer__partners partners" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <a class="partners__logo-center logo-center" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="logo-center__images" src="./images/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="34">
-          </a>
-        </p>
+        </a>
       </div>
     </footer>
     <!-- footer -->

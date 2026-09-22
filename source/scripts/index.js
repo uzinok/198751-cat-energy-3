@@ -40,7 +40,7 @@ if (document.querySelector('#map.dealers__map')) {
       const init = () => {
         const myMap = new ymaps.Map('map', {
           center: [59.938631, 30.323037],
-          zoom: 14.15,
+          zoom: 14,
           controls: []
         });
 
