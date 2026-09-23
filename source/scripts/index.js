@@ -22,7 +22,6 @@ if (document.querySelector('.header.no-js')) {
 }
 
 /* global ymaps */
-/* global ymaps */
 if (document.querySelector('#map.dealers__map')) {
   const script = document.createElement('script');
   script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
@@ -39,14 +38,22 @@ if (document.querySelector('#map.dealers__map')) {
       el.classList.remove('no-js');
 
       const init = () => {
+        const CENTER = [59.938631, 30.323037];
+        const SHIFT_PX = 244;
+
+        const ZOOM_MOBILE = 14;
+        const ZOOM_DESKTOP = 16;
+
+        const getZoom = () => (el.clientWidth < 768 ? ZOOM_MOBILE : ZOOM_DESKTOP);
+
         const myMap = new ymaps.Map('map', {
-          center: [59.938631, 30.323037],
-          zoom: 14,
+          center: CENTER,
+          zoom: getZoom(),
           controls: []
         });
 
         const myPlacemark = new ymaps.Placemark(
-          [59.938631, 30.323037],
+          CENTER,
           { hintContent: 'Мы тут' },
           {
             iconLayout: 'default#image',
@@ -65,19 +72,31 @@ if (document.querySelector('#map.dealers__map')) {
             return;
           }
 
-          const k = 0.057;
-          const newWidth = Math.round(mapWidth * k);
-          const newHeight = Math.round(newWidth * (53 / 57));
+          if (mapWidth < 768) {
+            myPlacemark.options.set({
+              iconImageSize: [57, 53],
+              iconImageOffset: [-28, -53]
+            });
+          } else {
+            myPlacemark.options.set({
+              iconImageSize: [113, 106],
+              iconImageOffset: [188, -106]
+            });
+          }
+        };
 
-          myPlacemark.options.set({
-            iconImageSize: [113, 106],
-            iconImageOffset: [-56, -106]
-          });
+        const updateMapShift = () => {
+          myMap.setCenter(CENTER, getZoom(), { duration: 0 });
+
+          if (window.innerWidth >= 1220) {
+            myMap.panBy([SHIFT_PX, 0], { duration: 0 });
+          }
         };
 
         const refresh = () => {
           myMap.container.fitToViewport();
           updatePlacemarkSize();
+          updateMapShift();
         };
 
         let resizeTimer;

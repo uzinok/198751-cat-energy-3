@@ -12,6 +12,11 @@
     padding-top: 62px;
     padding-bottom: 52px;
   }
+
+  @media (min-width: $min-xl) {
+    padding-top: 73px;
+    padding-bottom: 63px;
+  }
 }
 
 .footer__block {
