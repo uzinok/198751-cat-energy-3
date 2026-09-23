@@ -7,11 +7,17 @@
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     grid-template-columns: auto auto 1fr;
-    gap: 20px 44px;
   }
 
   @media (min-width: $min-md) {
+    gap: 20px 44px;
     margin-bottom: 98px;
+  }
+
+  @media (min-width: $min-xl) {
+    max-width: 365px;
+    gap: 55px 43px;
+    margin-bottom: 0;
   }
 }
 
@@ -132,6 +138,13 @@
   @media (min-width: $min-md) {
     gap: 8px;
     font-size: 20px;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-right: auto;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 327px;
   }
 }
 

@@ -35,11 +35,14 @@
   }
 
   @media (min-width: $min-xl) {
+    grid-template-columns: 1fr auto;
+    width: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: fit-content;
-    display: block;
     background-color: #ffffff;
+    transform: translateY(-5px);
+    padding: 62px 80px 57px 78px;
+    gap: 35px;
   }
 }
 
@@ -68,6 +71,10 @@
   @media (min-width: $min-md) {
     font-size: 16px;
   }
+
+  @media (min-width: $min-md) {
+    transform: translateY(-3px);
+  }
 }
 
 .dealers__address-block {
@@ -86,7 +93,7 @@
   height: 362px;
 
   @media (min-width: $min-md) {
-    height: 400px;
+    min-height: 400px;
   }
 }
 

@@ -1,5 +1,5 @@
 .how-work {
-  @media (min-width: $min-md) {
+  @media (min-width: $min-md) and (max-width: $max-xl) {
     border-bottom: 1px solid #e6e6e6;
   }
 }
@@ -10,6 +10,10 @@
   @media (min-width: $min-md) {
     padding-top: 23px;
     padding-bottom: 103px;
+  }
+
+  @media (min-width: $min-xl) {
+    padding-top: 48px;
   }
 }
 
@@ -37,6 +41,7 @@
 
   @media (min-width: $min-xl) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
   }
 }
 
@@ -56,7 +61,7 @@
 
     &::after {
       position: absolute;
-      width: 212px;
+      min-width: 127px;
       right: 0;
       bottom: -57px;
       font-family: var(--title-font-family, "Oswald"), sans-serif;
@@ -66,6 +71,10 @@
       z-index: -1;
       counter-increment: item;
       content: counter(item);
+
+      @media (min-width: $min-xl) {
+        min-width: 127px;
+      }
     }
   }
 

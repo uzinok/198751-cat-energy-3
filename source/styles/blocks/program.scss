@@ -1,5 +1,9 @@
 .program__container {
   padding-bottom: 23px;
+
+  @media (min-width: $min-xl) {
+    padding-top: 82px;
+  }
 }
 
 .program__list {

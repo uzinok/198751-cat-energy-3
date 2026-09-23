@@ -27,7 +27,10 @@
 
   @media (min-width: $min-xl) {
     display: grid;
+    gap: 0 215px;
     grid-template-columns: 1fr 1fr;
+    padding-top: 23px;
+    padding-bottom: 74px;
   }
 }
 
@@ -37,6 +40,10 @@
   @media (min-width: $min-md) {
     margin-bottom: 61px;
   }
+
+  @media (min-width: $min-xl) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__subtitle {
@@ -44,5 +51,9 @@
 
   @media (min-width: $min-md) {
     margin-bottom: 55px;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-bottom: 69px;
   }
 }

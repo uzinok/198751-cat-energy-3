@@ -41,5 +41,21 @@
 
   @media (min-width: $min-md) {
     margin-top: 16px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-top: 19px;
+    margin-left: 0;
+  }
+
+  & img {
+    width: 101px;
+    height: 18px;
+
+    @media (min-width: $min-xl) {
+      width: 118px;
+      height: 21px;
+    }
   }
 }

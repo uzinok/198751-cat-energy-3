@@ -51,6 +51,10 @@
     flex-wrap: wrap;
     gap: 24px;
   }
+
+  @media (min-width: $min-xl) {
+    gap: 34px;
+  }
 }
 
 .nav__item {
@@ -101,13 +105,36 @@
         left: 5px;
         height: 2px;
         background-color: var(--icon-background, #68b738);
+
+        @media (min-width: $min-xl) {
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $min-xl) {
+    padding: 19px 0 15px;
+    font-size: 20px;
+
+    &[aria-current="page"] {
+      &::after {
+        left: 0;
+        right: 0;
       }
     }
   }
 
   .nav--index & {
     @media (min-width: $min-xl) {
-      color: #ffffff;
+      color: var(--text-color-background, #ffffff);
+
+      &[aria-current="page"] {
+        &::after {
+          background-color: var(--text-color-background, #ffffff);
+        }
+      }
     }
   }
 }
