@@ -31,10 +31,7 @@
   @media (min-width: $min-md) {
     max-width: $max-width-container;
     margin: 0 auto;
-    padding-top: 35px;
-    padding-right: $container-offset;
-    padding-bottom: 0;
-    padding-left: $container-offset-tablet;
+    padding: 35px $container-offset 0 $container-offset-tablet;
     display: grid;
   }
 

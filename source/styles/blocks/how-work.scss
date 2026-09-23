@@ -72,7 +72,10 @@
       counter-increment: item;
       content: counter(item);
 
-      @media (min-width: $min-xl) {
+    }
+
+    @media (min-width: $min-xl) {
+      &::after {
         min-width: 127px;
       }
     }
