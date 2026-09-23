@@ -1,6 +1,5 @@
 .partners {
   --partners-icon-color: #666666;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,5 +28,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
     transition: background-color 200ms ease-in-out;
+  }
+
+  @media (min-width: $min-md) {
+    gap: 22px;
+    width: fit-content;
   }
 }

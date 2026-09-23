@@ -28,6 +28,11 @@
   &--small {
     font-size: 16px;
     line-height: 20px;
+
+    @media (min-width: $min-md) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   &--smaller {

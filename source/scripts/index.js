@@ -22,6 +22,7 @@ if (document.querySelector('.header.no-js')) {
 }
 
 /* global ymaps */
+/* global ymaps */
 if (document.querySelector('#map.dealers__map')) {
   const script = document.createElement('script');
   script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
@@ -52,22 +53,49 @@ if (document.querySelector('#map.dealers__map')) {
             iconImageHref: '../images/map/map-pin.png',
             iconImageSize: [57, 53],
             iconImageOffset: [-28, -53],
+            suppressMapActions: true
           }
         );
 
         myMap.geoObjects.add(myPlacemark);
 
-        myMap.container.fitToViewport();
+        const updatePlacemarkSize = () => {
+          const mapWidth = el.clientWidth;
+          if (!mapWidth) {
+            return;
+          }
 
-        let t;
+          const k = 0.057;
+          const newWidth = Math.round(mapWidth * k);
+          const newHeight = Math.round(newWidth * (53 / 57));
+
+          myPlacemark.options.set({
+            iconImageSize: [113, 106],
+            iconImageOffset: [-56, -106]
+          });
+        };
+
+        const refresh = () => {
+          myMap.container.fitToViewport();
+          updatePlacemarkSize();
+        };
+
+        let resizeTimer;
         window.addEventListener('resize', () => {
-          clearTimeout(t);
-          t = setTimeout(() => myMap.container.fitToViewport(), 150);
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(refresh, 150);
         });
+
         if ('ResizeObserver' in window) {
-          const ro = new ResizeObserver(() => myMap.container.fitToViewport());
-          ro.observe(document.querySelector('.dealers__map'));
+          let roTimer;
+          const ro = new ResizeObserver(() => {
+            clearTimeout(roTimer);
+            roTimer = setTimeout(refresh, 150);
+          });
+          ro.observe(el);
         }
+
+        refresh();
       };
 
       requestAnimationFrame(() => requestAnimationFrame(init));
