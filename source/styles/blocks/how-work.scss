@@ -71,7 +71,6 @@
       z-index: -1;
       counter-increment: item;
       content: counter(item);
-
     }
 
     @media (min-width: $min-xl) {

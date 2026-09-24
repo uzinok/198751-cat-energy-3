@@ -66,8 +66,8 @@
       mask-image: url("../../icons/stack.svg#button-arrow");
       mask-position: var(--mask-position-x, -6px) center;
       mask-repeat: no-repeat;
-
     }
+
     @media (min-width: $min-md) {
       &::after {
         margin-left: 25px;
