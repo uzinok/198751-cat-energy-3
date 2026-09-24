@@ -37,84 +37,81 @@ if (document.querySelector('#map.dealers__map')) {
 
       el.classList.remove('no-js');
 
+      const MAP_CENTER = [59.938631, 30.323037];
+      const ZOOM_MOBILE = 14;
+      const ZOOM_TABLET = 16;
+
       const init = () => {
-        const CENTER = [59.938631, 30.323037];
-        const SHIFT_PX = 244;
-
-        const ZOOM_MOBILE = 14;
-        const ZOOM_DESKTOP = 16;
-
-        const getZoom = () => (el.clientWidth < 768 ? ZOOM_MOBILE : ZOOM_DESKTOP);
+        const isTablet = window.matchMedia('(min-width: 768px)').matches;
 
         const myMap = new ymaps.Map('map', {
-          center: CENTER,
-          zoom: getZoom(),
-          controls: []
+          center: MAP_CENTER,
+          zoom: isTablet ? ZOOM_TABLET : ZOOM_MOBILE,
+          controls: [],
+          behaviors: ['drag'],
         });
 
         const myPlacemark = new ymaps.Placemark(
-          CENTER,
+          MAP_CENTER,
           { hintContent: 'Мы тут' },
           {
             iconLayout: 'default#image',
             iconImageHref: '../images/map/map-pin.png',
-            iconImageSize: [57, 53],
-            iconImageOffset: [-28, -53],
-            suppressMapActions: true
           }
         );
 
+        const updateIconSize = () => {
+          const isTabletView = window.matchMedia('(min-width: 768px)').matches;
+          const size = isTabletView ? [113, 106] : [57, 53];
+
+          myPlacemark.options.set({
+            iconImageSize: size,
+            iconImageOffset: [-size[0] / 2, -size[1]],
+          });
+        };
+
+        // Применяет адаптивный зум (16 от 768px, 14 на меньших) и смещение центра.
+        // Сдвиг содержимого: от 1220px — 244px вправо и 37px вниз, иначе 5px вправо и 52px вниз
+        const applyView = () => {
+          const isTabletView = window.matchMedia('(min-width: 768px)').matches;
+          const targetZoom = isTabletView ? ZOOM_TABLET : ZOOM_MOBILE;
+          const isDesktop = window.matchMedia('(min-width: 1220px)').matches;
+          const shiftX = isDesktop ? 244 : 5;
+          const shiftY = isDesktop ? 37 : 52;
+          const projection = myMap.options.get('projection');
+          const centerGlobal = projection.toGlobalPixels(MAP_CENTER, targetZoom);
+          const shiftedCenter = projection.fromGlobalPixels(
+            [centerGlobal[0] - shiftX, centerGlobal[1] - shiftY],
+            targetZoom
+          );
+          myMap.setCenter(shiftedCenter, targetZoom, { duration: 0 });
+        };
+
+        updateIconSize();
+
         myMap.geoObjects.add(myPlacemark);
 
-        const updatePlacemarkSize = () => {
-          const mapWidth = el.clientWidth;
-          if (!mapWidth) {
-            return;
-          }
+        myMap.container.fitToViewport();
 
-          if (mapWidth < 768) {
-            myPlacemark.options.set({
-              iconImageSize: [57, 53],
-              iconImageOffset: [-28, -53]
-            });
-          } else {
-            myPlacemark.options.set({
-              iconImageSize: [113, 106],
-              iconImageOffset: [188, -106]
-            });
-          }
-        };
+        applyView();
 
-        const updateMapShift = () => {
-          myMap.setCenter(CENTER, getZoom(), { duration: 0 });
-
-          if (window.innerWidth >= 1220) {
-            myMap.panBy([SHIFT_PX, 0], { duration: 0 });
-          }
-        };
-
-        const refresh = () => {
-          myMap.container.fitToViewport();
-          updatePlacemarkSize();
-          updateMapShift();
-        };
-
-        let resizeTimer;
+        let t;
         window.addEventListener('resize', () => {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(refresh, 150);
+          clearTimeout(t);
+          t = setTimeout(() => {
+            myMap.container.fitToViewport();
+            updateIconSize();
+            applyView();
+          }, 150);
         });
-
         if ('ResizeObserver' in window) {
-          let roTimer;
           const ro = new ResizeObserver(() => {
-            clearTimeout(roTimer);
-            roTimer = setTimeout(refresh, 150);
+            myMap.container.fitToViewport();
+            updateIconSize();
+            applyView();
           });
-          ro.observe(el);
+          ro.observe(document.querySelector('.dealers__map'));
         }
-
-        refresh();
       };
 
       requestAnimationFrame(() => requestAnimationFrame(init));

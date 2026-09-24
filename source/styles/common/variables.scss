@@ -1,32 +1,16 @@
 /* здесь используйте глобальные переменные */
-// $max-sm: 319px;
-// $min-sm: 320px;
 
-// $max-md: 767px;
-// $min-md: 768px;
-
-// $max-lg: 989px;
-// $min-lg: 990px;
-
-// $max-xl: 1219px;
-// $min-xl: 1220px;
-
-// $min-xxl: 1440px;
-
-/* Брейкпоинты (mobile-first) */
 $min-sm: 320px;
 $min-md: 768px;
 $min-lg: 990px;
 $min-xl: 1220px;
 $min-xxl: 1440px;
 
-/* Верхние границы: минус 0.02px — закрывают дробные вьюпорты */
 $max-sm: $min-sm - 0.02px;   // 319.98px
 $max-md: $min-md - 0.02px;   // 767.98px
 $max-lg: $min-lg - 0.02px;   // 989.98px
 $max-xl: $min-xl - 0.02px;   // 1219.98px
 $max-xxl: $min-xxl - 0.02px; // 1439.98px
-
 
 $container-offset: 20px;
 $container-offset-tablet: 30px;

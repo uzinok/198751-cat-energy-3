@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 100%;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 .dealers__container {
@@ -22,11 +23,11 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 27px;
   padding-bottom: 14px;
+  box-sizing: border-box;
 
-  @media (max-width: $max-lg) {
+  @media (min-width: $min-md) and (max-width: $max-lg) {
     width: 100%;
     padding: 64px 40px 20px;
-    box-sizing: border-box;
   }
 
   @media (min-width: $min-md) {

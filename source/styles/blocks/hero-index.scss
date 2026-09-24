@@ -19,6 +19,12 @@
       z-index: -2;
     }
   }
+
+  @media (min-width: 2082px) {
+    &::after {
+      background-position: right bottom;
+    }
+  }
 }
 
 .hero-index__container {
@@ -88,18 +94,21 @@
   position: relative;
   display: block;
   margin: 0 auto 3px;
-  z-index: -1;
 
   @media (min-width: $min-md) and (max-width: $max-xl) {
     order: 2;
   }
 
   @media (min-width: $min-md) {
-    width: 709px;
+    width: 703px;
     height: 609px;
     margin-top: -32px;
-    transform: translateX(-5px);
     margin-bottom: 0;
+    z-index: -1;
+
+    @media (max-width: $max-xl) {
+      transform: translateX(-8px);
+    }
   }
 
   @media (min-width: $min-xl) {
@@ -107,7 +116,7 @@
     grid-column-start: 2;
     width: 552px;
     height: 499px;
-    margin: -135px 0 0 -163px;
+    margin: -80px 0 0 -168px;
   }
 
   & img {
@@ -115,10 +124,18 @@
     object-fit: contain;
     width: 280px;
     height: 270px;
+    margin: 0 auto;
 
     @media (min-width: $min-md) {
       width: 709px;
       height: 609px;
+      max-width: 709px;
+    }
+
+    @media (min-width: $min-xl) {
+      max-width: 100%;
+      width: 552px;
+      height: 499px;
     }
   }
 }
