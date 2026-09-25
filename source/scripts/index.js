@@ -56,7 +56,7 @@ if (document.querySelector('#map.dealers__map')) {
           { hintContent: 'Мы тут' },
           {
             iconLayout: 'default#image',
-            iconImageHref: '../images/map/map-pin.png',
+            iconImageHref: './images/map/map-pin.png',
           }
         );
 
