@@ -21,7 +21,7 @@ if (document.querySelector('.header.no-js')) {
   });
 }
 
-/* global ymaps */
+/* global ymaps *//* для линтера */
 if (document.querySelector('#map.dealers__map')) {
   const script = document.createElement('script');
   script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
@@ -70,8 +70,6 @@ if (document.querySelector('#map.dealers__map')) {
           });
         };
 
-        // Применяет адаптивный зум (16 от 768px, 14 на меньших) и смещение центра.
-        // Сдвиг содержимого: от 1220px — 244px вправо и 37px вниз, иначе 5px вправо и 52px вниз
         const applyView = () => {
           const isTabletView = window.matchMedia('(min-width: 768px)').matches;
           const targetZoom = isTabletView ? ZOOM_TABLET : ZOOM_MOBILE;

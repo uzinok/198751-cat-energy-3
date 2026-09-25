@@ -38,6 +38,15 @@
   &--second {
     background-color: var(--button-background-second, #f2f2f2);
     color: var(--button-color-second, #444444);
+    transition: color 250ms ease-in-out;
+  }
+
+  &--second:hover {
+    background-color: var(--button-background-second-hover, #ebebeb);
+  }
+
+  &--second:active {
+    background-color: var(--button-background-second-hover, #ebebeb);
   }
 
   &--arrow {
@@ -74,11 +83,4 @@
       }
     }
   }
-}
-
-.button::before {
-  content: "";
-  height: 1em;
-  display: inline-block;
-  vertical-align: middle;
 }

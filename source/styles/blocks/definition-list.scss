@@ -1,7 +1,22 @@
+.definition-list {
+  margin: 0;
+}
+
 .definition-list__item {
+  margin: 0;
   display: flex;
+  gap: 15px;
+  justify-content: space-between;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $min-md) {
+    padding-top: 6px;
+    padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .definition-list__description {

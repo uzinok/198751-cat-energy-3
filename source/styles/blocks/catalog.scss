@@ -1,10 +1,21 @@
-.catalog {
-  position: relative;
+.catalog__container {
+  @media (max-width: $max-md) {
+    padding: 0;
+  }
+
+  @media (min-width: $min-md) {
+    padding-top: 34px;
+  }
 }
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(245px, 324px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 324px));
+  justify-content: center;
+
+  @media (min-width: $min-md) {
+    gap: 50px 60px;
+  }
 
   @media (min-width: $min-xl) {
     grid-template-columns: repeat(4, 1fr);

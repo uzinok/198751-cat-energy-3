@@ -2,8 +2,11 @@
   position: relative;
   width: 100%;
   max-width: 100%;
-  background-color: #ffffff;
   overflow: hidden;
+
+  &--index {
+    background-color: #ffffff;
+  }
 }
 
 .dealers__container {
