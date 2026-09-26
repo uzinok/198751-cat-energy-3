@@ -3,9 +3,7 @@
 
   @media (max-width: $max-md) {
     display: grid;
-    grid-template-areas: "product title" "product definition" "button button";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template: "product title" "product definition" 1fr "button button" / 1fr 1fr;
     border-top: 1px solid #ebebeb;
 
     &:last-child {

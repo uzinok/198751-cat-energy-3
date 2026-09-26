@@ -38,6 +38,10 @@
   &--smaller {
     font-size: 16px;
     line-height: 1;
+
+    @media (min-width: $min-md) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -56,5 +60,26 @@
     width: 100vw;
     height: 2px;
     background-color: var(--accent-background-1, #68b738);
+  }
+
+  @media (min-width: $min-md) {
+    font-size: 32px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    &::after {
+      right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      transform: translate(-100%, -50%);
+      width: 100vw;
+      height: 2px;
+      background-color: var(--accent-background-1, #68b738);
+    }
   }
 }
