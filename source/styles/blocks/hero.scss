@@ -9,6 +9,10 @@
   @media (min-width: $min-md) {
     padding-top: 36px;
   }
+
+  @media (min-width: $min-xl) {
+    padding-top: 15px;
+  }
 }
 
 .hero__title {
