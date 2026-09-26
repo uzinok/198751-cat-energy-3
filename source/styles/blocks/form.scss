@@ -3,9 +3,19 @@
 }
 
 .form__input {
+  padding: 13px 13px 11px;
   font-size: 20px;
-  line-height: auto;
+  line-height: initial;
+  color: var(--text-color-1, #444444);
   font-weight: 400;
   text-transform: uppercase;
   font-family: var(--title-font-family, "Oswald"), sans-serif;
+  border: 1px solid #cdcdcd;
+  background-color: var(--basic-background, #ffffff);
+}
+
+.form__button {
+  padding: 16px 26px 14px;
+  font-size: 20px;
+  line-height: 26px;
 }

@@ -1,3 +1,62 @@
 .subscription {
-  position: relative;
+  overflow: hidden;
+}
+
+.subscription__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.subscription__title {
+  margin-bottom: 33px;
+
+  @media (min-width: $min-md) {
+    margin-bottom: 66px;
+  }
+}
+
+.subscription__subtitle {
+  text-align: center;
+  margin: 0 30px 23px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+.subscription__form {
+  @media (min-width: $min-md) {
+    max-width: 632px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+.subscription__input {
+  width: 100%;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  @media (min-width: $min-md) {
+    margin-bottom: 0;
+  }
+}
+
+.subscription__button {
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: $min-md) {
+    width: fit-content;
+    padding: 15px 70px 14px;
+  }
 }

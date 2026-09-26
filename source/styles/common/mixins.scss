@@ -1,0 +1,26 @@
+@mixin font-face($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url("#{$path}.woff2") format("woff2"), url("#{$path}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin container($max-width-container, $container-offset, $container-offset-tablet, $container-offset-desktop, $min-md, $min-xxl) {
+  margin: 0 auto;
+  max-width: $max-width-container;
+  padding-right: $container-offset;
+  padding-left: $container-offset;
+
+  @media (min-width: $min-md) {
+    padding-right: $container-offset-tablet;
+    padding-left: $container-offset-tablet;
+  }
+
+  @media (min-width: $min-xxl) {
+    padding-right: $container-offset-desktop;
+    padding-left: $container-offset-desktop;
+  }
+}

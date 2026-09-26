@@ -1,28 +1,69 @@
 .program-card {
   position: relative;
+  padding: 21px 20px 4px;
   background-color: var(--second-background, #f2f2f2);
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    padding: 77px 316px 44px 52px;
+  }
+
+  @media (min-width: $min-xl) {
+    padding: 20px 52px 46px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: var(--icon-background, #68b738);
+
+    @media (min-width: $min-md) and (max-width: $max-xl) {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      top: 51.5%;
+      transform: translateY(-50%);
+      right: 63px;
+    }
+
+    @media (min-width: $min-xl) {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &::after {
     content: "";
+    top: 21px;
+    left: 12px;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 67px;
     height: 50px;
     background-color: var(--icon-color-1, #000000);
-    mask-position: center;
+    mask-position: center bottom;
     mask-repeat: no-repeat;
+
+    @media (min-width: $min-md) and (max-width: $max-xl) {
+      width: 268px;
+      height: 194px;
+      left: auto;
+      top: 48%;
+      transform: translateY(-50%);
+      right: 29px;
+    }
+
+    @media (min-width: $min-xl) {
+      top: 41px;
+      left: 35px;
+      width: 134px;
+      height: 97px;
+    }
   }
 
   &--slim::after {
@@ -30,6 +71,57 @@
   }
 
   &--fat::after {
+    top: 24px;
     mask-image: url("../../icons/stack.svg#program__fat");
+
+    @media (min-width: $min-md) and (max-width: $max-xl) {
+      top: 51.5%;
+    }
+
+    @media (min-width: $min-xl) {
+      top: 47px;
+      left: 33px;
+    }
   }
+}
+
+.program-card__title {
+  margin-bottom: 30px;
+  margin-left: 70px;
+  margin-top: 8px;
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    margin-top: 0;
+    margin-bottom: 24px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-top: 56px;
+    margin-bottom: 74px;
+    margin-left: 162px;
+  }
+}
+
+.program-card__text {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  @media (max-width: $max-md) {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: $min-md) {
+    color: var(--title-color, #000000);
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-bottom: 16px;
+  }
+}
+
+.program-card__button {
+  padding-left: 0;
 }

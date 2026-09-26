@@ -1,3 +1,37 @@
 .partners {
-  position: relative;
+  --partners-icon-color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    --partners-icon-color: var(--icon-background, #68b738);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 42px;
+    background-color: var(--partners-icon-color, #666666);
+    mask-image: url("../../icons/stack.svg#logo-htmlacademy");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 200ms ease-in-out;
+  }
+
+  @media (min-width: $min-md) {
+    gap: 22px;
+    width: fit-content;
+  }
 }

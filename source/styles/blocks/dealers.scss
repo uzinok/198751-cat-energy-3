@@ -1,13 +1,122 @@
 .dealers {
-  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  &--index {
+    background-color: #ffffff;
+  }
+}
+
+.dealers__container {
+  @media (min-width: $min-xl) {
+    position: absolute;
+    inset: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+}
+
+.dealers__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 27px;
+  padding-bottom: 14px;
+  box-sizing: border-box;
+
+  @media (min-width: $min-md) and (max-width: $max-lg) {
+    width: 100%;
+    padding: 64px 40px 20px;
+  }
+
+  @media (min-width: $min-md) {
+    padding-top: 62px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $min-xl) {
+    grid-template-columns: 1fr auto;
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transform: translateY(-5px);
+    padding: 62px 80px 57px 78px;
+    gap: 35px;
+  }
 }
 
 .dealers__title {
   color: var(--text-color-2, #111111);
+  text-transform: uppercase;
+  padding-right: 15px;
+
+  @media (min-width: $min-md) {
+    max-width: 200px;
+    margin-bottom: 0;
+  }
 }
 
 .dealers__address {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
+    max-width: 200px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  @media (min-width: $min-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $min-md) {
+    transform: translateY(-3px);
+  }
+}
+
+.dealers__address-block {
+  display: block;
+}
+
+.dealers__address-sity {
+  @media (min-width: $min-md) {
+    margin-top: 20px;
+    display: block;
+  }
+}
+
+.dealers__map-wrap {
+  position: relative;
+  height: 362px;
+
+  @media (min-width: $min-md) {
+    min-height: 400px;
+  }
+}
+
+.dealers__map {
+  position: absolute;
+  inset: 0;
+
+  &.no-js {
+    background-image: url("../../images/map/footer-map@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-width: $min-md) {
+      background-image: url("../../images/map/footer-map@tablet@1x.jpg");
+    }
+
+    @media (min-width: $min-xl) {
+      background-image: url("../../images/map/footer-map@desktop@1x.jpg");
+    }
+  }
 }
