@@ -82,4 +82,20 @@
       background-color: var(--accent-background-1, #68b738);
     }
   }
+
+  @media (min-width: $min-xl) {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 40px;
+
+    &::before {
+      top: calc(50% - 2px);
+      left: -40px;
+    }
+
+    &::after {
+      top: calc(50% - 2px);
+      right: -40px;
+    }
+  }
 }

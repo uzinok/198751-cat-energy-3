@@ -19,5 +19,6 @@
 
   @media (min-width: $min-xl) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 53px 81px;
   }
 }

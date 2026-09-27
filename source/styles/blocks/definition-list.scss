@@ -17,6 +17,10 @@
     line-height: 20px;
     border-bottom: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $min-xl) {
+    padding-bottom: 6px;
+  }
 }
 
 .definition-list__description {
