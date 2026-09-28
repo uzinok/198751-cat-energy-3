@@ -1,14 +1,5 @@
 /* в этот файл добавляет скрипты*/
 
-if (document.querySelector('.before-after') && document.querySelector('.before-after__range-js')) {
-  const slider = document.querySelector('.before-after');
-  const range = document.querySelector('.before-after__range-js');
-
-  range.addEventListener('input', () => {
-    slider.style.setProperty('--value', `${range.value * 0.1}%`);
-  });
-}
-
 if (document.querySelector('.header.no-js')) {
   document.querySelector('.header.no-js').classList.remove('no-js');
 
@@ -18,6 +9,16 @@ if (document.querySelector('.header.no-js')) {
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('nav-toggle--open');
     nav.classList.toggle('nav--open');
+  });
+}
+
+if (document.querySelector('.before-after') && document.querySelector('.before-after__range-js')) {
+  const slider = document.querySelector('.before-after');
+  slider.classList.remove('no-js');
+  const range = document.querySelector('.before-after__range-js');
+
+  range.addEventListener('input', () => {
+    slider.style.setProperty('--value', `${range.value * 0.1}%`);
   });
 }
 
