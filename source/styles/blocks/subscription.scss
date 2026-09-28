@@ -6,9 +6,14 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-md) {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  @media (min-width: $min-xl) {
+    padding-top: 96px;
+    padding-bottom: 104px;
   }
 }
 
@@ -18,6 +23,10 @@
   @media (min-width: $min-md) {
     margin-bottom: 66px;
   }
+
+  @media (min-width: $min-xl) {
+    margin-bottom: 71px;
+  }
 }
 
 .subscription__subtitle {
@@ -26,7 +35,7 @@
   font-size: 16px;
   line-height: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-md) {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 24px;
@@ -38,6 +47,10 @@
     max-width: 632px;
     margin: 0 auto;
     display: flex;
+  }
+
+  @media (min-width: $min-xl) {
+    max-width: 752px;
   }
 }
 

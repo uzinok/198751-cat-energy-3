@@ -10,6 +10,8 @@
   }
 
   @media (min-width: $min-xl) {
+    display: grid;
+    grid-template-areas: "title title" "list banner";
     padding-top: 72px;
   }
 }
@@ -20,6 +22,11 @@
   @media (min-width: $min-md) {
     margin-bottom: 80px;
   }
+
+  @media (min-width: $min-xl) {
+    margin-bottom: 78px;
+    grid-area: title;
+  }
 }
 
 .additional__list {
@@ -29,6 +36,11 @@
 
   @media (min-width: $min-md) {
     margin-bottom: 69px;
+  }
+
+  @media (min-width: $min-xl) {
+    margin-bottom: 0;
+    grid-area: list;
   }
 }
 
@@ -46,8 +58,17 @@
     align-items: baseline;
     flex-wrap: wrap;
     padding: 26px 37px 28px;
+  }
+
+  @media (min-width: $min-md) and (max-width: $max-xl) {
     border-right: $border-additional;
     border-left: $border-additional;
+  }
+
+  @media (min-width: $min-xl) {
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0 16px;
   }
 }
 
@@ -59,6 +80,11 @@
   @media (min-width: $min-md) {
     margin-right: auto;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $min-xl) {
+    width: 311px;
+    margin-right: 0;
   }
 }
 
@@ -78,10 +104,28 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $min-xl) {
+    justify-content: space-between;
+    width: 285px;
+    margin-bottom: -3px;
+    margin-left: 0;
+  }
+}
+
+.additional__term {
+  @media (min-width: $min-xl) {
+    width: 176px;
+    margin-right: 15px;
+  }
 }
 
 .additional__description {
   margin: 0;
+
+  @media (min-width: $min-xl) {
+    min-width: 42px;
+  }
 }
 
 .additional__button {
@@ -93,5 +137,21 @@
     margin-top: 21px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $min-xl) {
+    width: auto;
+    min-width: 244px;
+    margin-top: 0;
+    margin-left: 23px;
+  }
+}
+
+.additional__banner {
+  @media (min-width: $min-xl) {
+    grid-area: banner;
+    width: 245px;
+    margin-left: 80px;
+    box-sizing: border-box;
   }
 }
