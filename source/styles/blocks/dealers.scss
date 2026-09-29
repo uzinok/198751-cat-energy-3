@@ -10,7 +10,6 @@
 
   @media (min-width: $min-md) {
     position: relative;
-    height: 400px;
   }
 }
 
@@ -18,9 +17,10 @@
   @media (min-width: $min-xl) {
     position: relative;
     z-index: 1;
-    height: 100%;
+    min-height: 400px;
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
 }
 
@@ -99,13 +99,14 @@
   position: relative;
   height: 362px;
 
-  @media (min-width: $min-xl) {
-    position: absolute;
-    inset: 0;
-  }
-
   @media (min-width: $min-md) {
     height: 400px;
+  }
+
+  @media (min-width: $min-xl) {
+    height: auto;
+    position: absolute;
+    inset: 0;
   }
 }
 
