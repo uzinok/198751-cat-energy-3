@@ -8,6 +8,9 @@
   }
 
   @media (min-width: $min-xl) {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: start;
     padding: 20px 52px 46px;
   }
 

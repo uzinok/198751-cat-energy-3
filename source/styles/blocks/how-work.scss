@@ -9,7 +9,7 @@
 
   @media (min-width: $min-md) {
     padding-top: 23px;
-    padding-bottom: 103px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: $min-xl) {
@@ -32,11 +32,16 @@
   display: grid;
   gap: 20px;
 
+  @media (max-width: $max-md) {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   @media (min-width: $min-md) {
     grid-template-columns: 1fr 1fr;
     list-style-type: none;
     counter-reset: item;
-    gap: 94px 59px;
+    gap: 48px 59px;
   }
 
   @media (min-width: $min-xl) {
@@ -58,12 +63,13 @@
     --size-icon: 80px;
     --top-icon: 40px;
     padding-left: 0;
+    min-height: 270px;
 
     &::after {
       position: absolute;
       min-width: 211px;
       right: 0;
-      bottom: -57px;
+      top: 0;
       font-family: var(--title-font-family, "Oswald"), sans-serif;
       color: var(--second-background, #f2f2f2);
       font-size: 280px;
