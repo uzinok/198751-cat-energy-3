@@ -1,3 +1,20 @@
 .hero {
-  padding: 10px;
+  padding: 0;
+}
+
+.hero__container {
+  padding-top: 28px;
+  padding-bottom: 40px;
+
+  @media (min-width: $min-md) {
+    padding-top: 36px;
+  }
+
+  @media (min-width: $min-xl) {
+    padding-top: 15px;
+  }
+}
+
+.hero__title {
+  margin: 0;
 }

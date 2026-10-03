@@ -1,3 +1,29 @@
-.catalog {
-  position: relative;
+.catalog__container {
+  @media (max-width: $max-md) {
+    padding: 0;
+  }
+
+  @media (min-width: $min-md) {
+    padding-top: 34px;
+  }
+
+  @media (min-width: $min-xl) {
+    padding-left: $container-offset-desktop - 5;
+    padding-right: $container-offset-desktop - 5;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 324px));
+  justify-content: center;
+
+  @media (min-width: $min-md) {
+    gap: 50px 60px;
+  }
+
+  @media (min-width: $min-xxl) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 53px 81px;
+  }
 }

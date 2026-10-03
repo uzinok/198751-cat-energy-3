@@ -1,14 +1,136 @@
 .nav {
-  position: relative;
+  @media (max-width: $max-md) {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  @media (min-width: $min-md) {
+    margin-left: auto;
+  }
+
+  @media (min-width: $min-xl) {
+    max-width: 50%;
+  }
+}
+
+
+.header:not(.no-js) nav {
+  @media (max-width: $max-md) {
+    top: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: var(--basic-background, #ffffff);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+
+    &.nav--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .no-js & {
+    @media (max-width: $max-md) {
+      display: grid;
+      margin-top: 15px;
+    }
+  }
+
+  @media (min-width: $min-md) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  @media (min-width: $min-xl) {
+    gap: 34px;
+  }
+}
+
+.nav__item {
+  @media (max-width: $max-md) {
+    border-bottom: 1px solid #e6e6e6;
+
+    &:first-child {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
 }
 
 .nav__link {
   display: block;
   color: var(--title-color, #000000);
-  font-family: var(--title-font-family, "Oswald"), sans-serif;
+  font-family: var(--title-font-family, "Oswald", sans-serif);
   text-transform: uppercase;
   font-size: 20px;
   line-height: 1;
   text-decoration: none;
   text-align: center;
+  transition: opacity 250ms ease-in-out;
+
+  &:hover:not([aria-current="page"]) {
+    opacity: 0.6;
+  }
+
+  &:active:not([aria-current="page"]) {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $max-md) {
+    padding: 23px 24px 22px;
+  }
+
+  @media (min-width: $min-md) {
+    position: relative;
+    padding: 14px 5px;
+    font-size: 18px;
+    line-height: 24px;
+
+    &[aria-current="page"]::after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      bottom: 4px;
+      left: 5px;
+      height: 2px;
+      background-color: var(--icon-background, #68b738);
+    }
+  }
+
+  @media (min-width: $min-xl) {
+    &[aria-current="page"]::after {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  @media (min-width: $min-xl) {
+    padding: 19px 0 15px;
+    font-size: 20px;
+
+    &[aria-current="page"]::after {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .nav--index & {
+    @media (min-width: $min-xl) {
+      color: var(--text-color-background, #ffffff);
+    }
+
+    &[aria-current="page"]::after {
+      background-color: var(--text-color-background, #ffffff);
+    }
+  }
 }

@@ -1,6 +1,13 @@
+@property --mask-position-x {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: -6px;
+}
+
 .button {
-  display: inline-block;
   appearance: none;
+  display: inline-block;
+  padding: 14px 26px;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -9,19 +16,52 @@
   font-family: var(--title-font-family, "Oswald"), sans-serif;
   border: 0;
 
+  @media (min-width: $min-md) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
   &--submit {
     background-color: var(--button-background-submit, #68b738);
     color: var(--button-color, #ffffff);
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
+    &:hover {
+      background-color: var(--button-background-submit-hover, #5eaa2f);
+    }
+
+    &:active {
+      color: var(--button-color-active, rgba(255, 255, 255, 0.3));
+    }
   }
 
   &--second {
     background-color: var(--button-background-second, #f2f2f2);
     color: var(--button-color-second, #444444);
+    transition: color 250ms ease-in-out;
   }
 
-  &--icon {
+  &--second:hover {
+    background-color: var(--button-background-second-hover, #ebebeb);
+  }
+
+  &--second:active {
+    background-color: var(--button-background-second-hover, #ebebeb);
+  }
+
+  &--arrow {
+    --mask-position-x: -6px;
     background-color: transparent;
     color: inherit;
+    transition: --mask-position-x 250ms ease-in-out, opacity 250ms ease-in-out;
+
+    &:hover {
+      --mask-position-x: -1px;          // ← меняем переменную, а не mask-position
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     &::after {
       content: "";
@@ -29,17 +69,18 @@
       vertical-align: middle;
       width: 32px;
       height: 10px;
+      margin-left: 17px;
+      margin-top: -8px;
       background-color: var(--icon-color-1, #000000);
       mask-image: url("../../icons/stack.svg#button-arrow");
-      mask-position: -8px center;
+      mask-position: var(--mask-position-x, -6px) center;
       mask-repeat: no-repeat;
     }
-  }
-}
 
-.button::before {
-  content: "";
-  height: 1em;
-  display: inline-block;
-  vertical-align: middle;
+    @media (min-width: $min-md) {
+      &::after {
+        margin-left: 25px;
+      }
+    }
+  }
 }

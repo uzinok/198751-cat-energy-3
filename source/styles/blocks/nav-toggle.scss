@@ -1,3 +1,71 @@
 .nav-toggle {
-  appearance: none;
+  display: none;
+
+  @media (max-width: $max-md) {
+    position: relative;
+    width: 36px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    color: var(--icon-color-1, #000000);
+    text-decoration: none;
+    background: none;
+    appearance: none;
+    cursor: pointer;
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 43%;
+      left: 57%;
+      transform: translate(-50%, -50%);
+      background-color: currentColor;
+      mask-image: url("../../icons/stack.svg#nav-toggle__open");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      opacity: 1;
+      transition: opacity 250ms ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 19px;
+      height: 20px;
+      top: 40%;
+      left: 71%;
+      transform: translate(-50%, -50%);
+      background-color: currentColor;
+      mask-image: url("../../icons/stack.svg#nav-toggle__close");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      opacity: 0;
+      transition: opacity 250ms ease-in-out;
+    }
+
+    header:not(.no-js) & {
+      display: block;
+    }
+  }
+}
+
+.nav-toggle--open {
+  &::before {
+    opacity: 0;
+  }
+
+  &::after {
+    opacity: 1;
+  }
 }
