@@ -19,6 +19,7 @@
 
   &::after {
     content: "";
+    flex-shrink: 0;
     display: block;
     width: 27px;
     height: 42px;
