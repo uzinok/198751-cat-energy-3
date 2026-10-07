@@ -9,8 +9,11 @@
     z-index: -1;
 
     @media (min-width: $min-md) {
-      top: auto;
-      height: 462px;
+      top: 619px;
+    }
+
+    @media (min-width: $min-xl) {
+      top: 159px;
     }
   }
 }
