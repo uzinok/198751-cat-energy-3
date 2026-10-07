@@ -88,6 +88,10 @@
     color: var(--button-background-submit-hover, #5eaa2f);
     opacity: 0.6;
   }
+
+  .before-after__range:focus-visible + .before-after__range-visible {
+    outline: auto;
+  }
 }
 
 .example__before-after.no-js .before-after__range-visible {

@@ -151,8 +151,9 @@
 .additional__banner {
   @media (min-width: $min-xxl) {
     grid-area: banner;
+    align-self: start;
     width: 245px;
-    height: 290px;
+    min-height: 290px;
     margin-left: auto;
     box-sizing: border-box;
   }

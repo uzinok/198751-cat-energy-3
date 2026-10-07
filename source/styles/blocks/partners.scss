@@ -17,6 +17,10 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    --partners-icon-color: var(--icon-background, #68b738);
+  }
+
   &::after {
     content: "";
     flex-shrink: 0;

@@ -24,6 +24,10 @@
     opacity: 0.3;
   }
 
+  &:focus-visible {
+    color: var(--icon-background, #68b738);
+  }
+
   &::before {
     content: "";
     position: absolute;

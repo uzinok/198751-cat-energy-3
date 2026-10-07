@@ -17,12 +17,12 @@
     mask-position: center;
     mask-repeat: no-repeat;
 
-    @media (min-width: $min-md) and (max-width: $max-xl) {
+    @media (min-width: $min-md) and (max-width: $max-xxl) {
       margin: 0 auto 0 21px;
     }
   }
 
-  @media (min-width: 768px) and (max-width: $max-xl) {
+  @media (min-width: 768px) and (max-width: $max-xxl) {
     display: flex;
     align-items: center;
     padding-bottom: 60px;
@@ -40,7 +40,7 @@
     background-image: linear-gradient(to right, var(--accent-background-2, rgba(105, 183, 56, 0.85)), var(--accent-background-2, rgba(105, 183, 56, 0.85))), image-set(url("../../images/banner-gift/banner-background@tablet@1x.webp") 1x, url("../../images/banner-gift/banner-background@tablet@2x.webp") 2x, url("../../images/banner-gift/banner-background@tablet@1x.jpg") 1x, url("../../images/banner-gift/banner-background@tablet@2x.jpg") 2x), linear-gradient(to right, #4d4c52, #434248);
   }
 
-  @media (min-width: $min-xl) {
+  @media (min-width: $min-xxl) {
     background-image: linear-gradient(to right, var(--accent-background-2, rgba(105, 183, 56, 0.85)), var(--accent-background-2, rgba(105, 183, 56, 0.85))), image-set(url("../../images/banner-gift/banner-background@desktop@1x.webp") 1x, url("../../images/banner-gift/banner-background@desktop@2x.webp") 2x, url("../../images/banner-gift/banner-background@desktop@1x.jpg") 1x, url("../../images/banner-gift/banner-background@desktop@2x.jpg") 2x), linear-gradient(to right, #4d4c52, #434248);
   }
 
@@ -54,7 +54,7 @@
   font-size: 16px;
   line-height: 20px;
 
-  @media (min-width: $min-md) and (max-width: $max-xl) {
+  @media (min-width: $min-md) and (max-width: $max-xxl) {
     min-width: 228px;
     text-align: initial;
   }
