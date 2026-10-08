@@ -26,13 +26,13 @@
 
   &--before {
     left: 0;
-    width: var(--value);
+    width: var(--value, 50%);
     object-position: left;
   }
 
   &--after {
     right: 0;
-    width: calc(100% - var(--value));
+    width: calc(100% - var(--value, 50%));
     object-position: right;
   }
 }

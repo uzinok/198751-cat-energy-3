@@ -65,7 +65,7 @@
   .before-after__range-visible {
     position: absolute;
     top: 0;
-    left: var(--value);
+    left: var(--value, 50%);
     width: 4px;
     height: 100%;
     color: #666666;
@@ -121,7 +121,7 @@
 .example__before-after.no-js .before-after__range-visible {
   position: absolute;
   top: 0;
-  left: var(--value);
+  left: var(--value, 50%);
   width: 4px;
   height: 100%;
   color: #666666;
