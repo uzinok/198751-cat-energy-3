@@ -48,54 +48,48 @@
 .title--line {
   position: relative;
   width: fit-content;
+  margin-left: -$container-offset;
   font-size: 24px;
   line-height: 1;
 
   &::after {
     content: "";
     position: absolute;
-    top: calc(50% - 1px);
-    right: -41px;
-    transform: translate(100%, -50%);
+    top: calc(0.5em - 2px);
+    right: 0;
     width: 100vw;
     height: 2px;
     background-color: var(--accent-background-1, #68b738);
+    box-shadow: 100vw 0 0 var(--accent-background-1, #68b738);
+    z-index: -1;
+
+    @media (min-width: $min-xl) {
+      top: calc(0.5em - 3px);
+    }
   }
 
   @media (min-width: $min-md) {
+    margin-left: 0;
     font-size: 32px;
-    padding-right: 40px;
-    padding-left: 40px;
-
-    &::after {
-      right: 0;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: calc(50% - 1px);
-      left: 0;
-      transform: translate(-100%, -50%);
-      width: 100vw;
-      height: 2px;
-      background-color: var(--accent-background-1, #68b738);
-    }
   }
 
   @media (min-width: $min-xl) {
-    padding-right: 0;
-    padding-left: 0;
+    margin-left: -40px;
     font-size: 40px;
+  }
+}
 
-    &::before {
-      top: calc(50% - 2px);
-      left: -40px;
-    }
+.title__text {
+  padding-right: 40px;
+  padding-left: $container-offset;
+  background-image: linear-gradient(var(--basic-background, #ffffff), var(--basic-background, #ffffff));
+  background-repeat: no-repeat;
+  background-size: 100% 0.25em;
+  background-position: 0 50%;
+  box-decoration-break: clone;
 
-    &::after {
-      top: calc(50% - 2px);
-      right: -40px;
-    }
+  @media (min-width: $min-md) {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }

@@ -29,7 +29,13 @@
   }
 }
 
+.header__logo {
+  flex-shrink: 0;
+}
+
 .header__logo-center {
+  flex-shrink: 0;
+
   @media (max-width: $max-md) {
     .no-js & {
       position: absolute;

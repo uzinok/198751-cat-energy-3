@@ -1,7 +1,3 @@
-.additional {
-  overflow: hidden;
-}
-
 .additional__container {
   padding-top: 25px;
 
@@ -12,6 +8,7 @@
   @media (min-width: $min-xxl) {
     display: grid;
     grid-template-areas: "title title" "list banner";
+    grid-template-columns: 1fr auto;
     padding-top: 72px;
   }
 }
