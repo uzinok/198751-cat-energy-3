@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Cat Energy | Интернет-магазин функционального питания для котов</title>
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/lato/latoregular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="./favicons/favicon-152x152.png" sizes="152x152">
     <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
@@ -288,7 +290,7 @@
             <!-- Рис -->
             <article class="catalog-card">
               <a class="catalog-card__product" href="#" tabindex="-1">
-                <picture class="catalog-card__picture catalog-card__picture--rice">
+                <picture class="catalog-card__picture">
                   <source media="(min-width: 1220px)" srcset="images/catalog-products/rice-500@desktop@1x.webp 1x, images/catalog-products/rice-500@desktop@2x.webp 2x" type="image/webp" width="161" height="172">
                   <source media="(min-width: 1220px)" srcset="images/catalog-products/rice-500@desktop@1x.png 1x, images/catalog-products/rice-500@desktop@2x.png 2x" type="image/png" width="161" height="172">
 
@@ -296,7 +298,7 @@
                   <source media="(min-width: 768px)" srcset="images/catalog-products/rice-500@tablet@1x.png 1x, images/catalog-products/rice-500@tablet@2x.png 2x" type="image/png" width="161" height="172">
 
                   <source srcset="images/catalog-products/rice-500@1x.webp 1x, images/catalog-products/rice-500@2x.webp 2x" type="image/webp">
-                  <img class="catalog-card__link" src="images/catalog-products/rice-500@1x.png" srcset="images/catalog-products/rice-500@1x.png 1x, images/catalog-products/rice-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом риса" width="68" height="86" loading="lazy">
+                  <img class="catalog-card__image" src="images/catalog-products/rice-500@1x.png" srcset="images/catalog-products/rice-500@1x.png 1x, images/catalog-products/rice-500@2x.png 2x" alt="Cat Energy PRO 500 грамм со вкусом риса" width="68" height="86" loading="lazy">
                 </picture>
               </a>
               <a class="catalog-card__link" href="#">
@@ -340,7 +342,9 @@
       <!-- additional -->
       <section class="additional">
         <div class="additional__container container">
-          <h2 class="additional__title title title--line">Дополнительные товары</h2>
+          <h2 class="additional__title title title--line">
+            <span class="title__text">Дополнительные товары</span>
+          </h2>
 
           <!-- additional__list -->
           <ul class="additional__list">
@@ -401,7 +405,9 @@
       <!-- subscription -->
       <section class="subscription">
         <div class="subscription__container container">
-          <h2 class="subscription__title title title--line">Акции и новинки</h2>
+          <h2 class="subscription__title title title--line">
+            <span class="title__text">Акции и новинки</span>
+          </h2>
           <p class="subscription__subtitle subtitle">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
 
           <form class="subscription__form form" action="https://echo.htmlacademy.ru/" method="post">

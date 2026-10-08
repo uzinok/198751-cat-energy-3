@@ -79,12 +79,6 @@
   }
 }
 
-.catalog-card__picture--rice {
-  & img {
-    margin-top: 5px;
-  }
-}
-
 .catalog-card__link {
   margin-bottom: 14px;
   text-decoration: none;
@@ -201,10 +195,11 @@
       width: 60px;
       height: 60px;
       margin-bottom: 50px;
+      mask-image: url("../../icons/stack.svg#plus@tablet");
     }
 
     @media (min-width: $min-xl) {
-      margin-bottom: 38px;
+      margin-bottom: 41px;
     }
   }
 
@@ -221,7 +216,7 @@
   }
 
   @media (min-width: $min-xl) {
-    padding-top: 143px;
+    padding-top: 141px;
   }
 }
 
